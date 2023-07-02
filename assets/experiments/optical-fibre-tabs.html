@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <title>Tabs</title>
     <link rel="stylesheet" type="text/css" href="experiment-tabs.css">
+    <link rel="stylesheet" href="assets/css/circular-nav-menu.css">
     <!-- <link rel="Stylesheet" href="optic-fiber-experiment.css"> -->
     <link rel="stylesheet" href="virtual-lab-sidebar.css">
     <link rel="stylesheet" href="opticalfibre.css">
@@ -82,6 +83,36 @@
         </script>
 </head>
 <body style="padding: 20px">
+    <div class="nav-menu-body">
+        <div class="nav-menu">
+            <div class="menutoggle textblack"><ion-icon name="menu"></ion-icon></div>
+                <li style="--i:4">
+                    <a href="index.html#Home" title="Home"><ion-icon name="home"></ion-icon></a>
+                </li>
+                <li style="--i:3" id="i3">
+                    <div class="hover-menu">
+                        <a href="Virtual-Physics-Lab-Revised.html#Experiments" title="Experiments"><ion-icon name="logo-apple-ar"></ion-icon></a>
+                        <div class="experiment-menu">
+                            <a href="assets/experiments/optical-fibre-tabs.html">Experiment 1</a>
+                            <br>
+                            <a href="assets/experiments/Malus-law-tabs.html">Experiment 2</a>
+                            <br>
+                            <a href="assets/experiments/ultrasonic-testing-tabs.html">Experiment 3</a>
+                            <br>
+                            <a href="assets/experiments/laser-tabs.html">Experiment 4</a>
+                            <br>
+                            <a href="assets/experiments/projectile-motion-tabs.html">Experiment 5</a>
+                        </div>
+                    </div>
+                </li>
+                <li style="--i:2">
+                    <a title="Dark Mode" class="dark-mode-toggle"><ion-icon name="contrast"></ion-icon></a>
+                </li>
+                <li style="--i:1">
+                    <a href="#" title="References"><ion-icon name="search"></ion-icon></a>
+                </li>
+        </div>
+    </div>
     <div id="progress">
         <span id="progress-value">&#x1F815;</span>
     </div>
