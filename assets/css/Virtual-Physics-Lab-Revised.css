@@ -102,7 +102,7 @@ header li{
 }
 /* Parallax Shit please don't touch unknowingly */
 .parallax{
-    min-height: 100dvh;
+    min-height: 150dvh;
     background-attachment: fixed;
     background-position: center;
     display: flex;
