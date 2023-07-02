@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Projectile Motion</title>
+    <link rel="stylesheet" type="text/css" href="experiment-tabs.css">
+    <link rel="stylesheet" href="virtual-lab-sidebar.css">
+    <link rel="stylesheet" href="projectilemotion.css">
+    <nav class="navbar">
+        <div class="navdiv">
+            <div class="logo"><a href="virtual-lab-paralax.html">Virtual Physics Lab</a></div>
+            <!-- <ul>
+                <li><a href="virtual-lab-paralax.html">Home</a></li>
+                <li><a href="optical-fibre-tabs.html">Fibre Optics</a></li>
+                <li><a href="Malus-law-tabs.html">Polarization-Malus Law</a></li>
+                <li><a href="ultrasonic-testing-tabs.html">Ultrasonic Inferometer</a></li>
+                <li><a href="laser-tabs.html">Laser</a></li>
+                <li><a href="projectile-motion-tabs.html">Projectile Motion</a></li>
+            </ul> -->
+        </div>
+    </nav>
+    <script>
+        function Range()
+   {
+           vel = parseFloat(document.getElementById("u").value);
+           ang = parseFloat(document.getElementById("theta").value);
+           g = 9.81;
+           sin = Math.sin(2*ang);
+           if(0<=sin)
+        {
+           range = (Math.pow(vel,2)*Math.sin(2*ang))/g;
+           document.getElementById("range").value = range;
+        }
+           if(0>sin)
+       {
+           range = "Wrong values Entered"
+           document.getElementById("range").value = range;
+       }
+   }    
+        function Height()
+        {
+           vel = parseFloat(document.getElementById("u").value);
+           ang = parseFloat(document.getElementById("theta").value);
+           g = 9.81;
+           height = (Math.pow(vel,2)*Math.pow(Math.sin(ang),2))/2*g;
+           document.getElementById("h").value = height;
+        }
+        function Time()
+        {
+           vel = parseFloat(document.getElementById("u").value);
+           ang = parseFloat(document.getElementById("theta").value);
+           g = 9.81;
+           sin = Math.sin(ang);
+           if(0<=sin)
+           {  
+           time = (2*vel*Math.sin(ang))/g;
+           document.getElementById("t").value = time;
+           }
+           if(0>sin)
+           {
+               time = "Wrong values Entered";
+               document.getElementById("t").value = time;
+           }
+        } 
+        </script>
+</head>
+<body style="padding: 20px">
+    <div id="progress">
+        <span id="progress-value">&#x1F815;</span>
+    </div>
+<h1 class="title">Projectile Motion</h1>
+<div class="tabContainer">
+    <div class="buttonContainer">
+        <button onclick="showPanel(0,'#FFDAB9')">Theory</button>
+        <button onclick="showPanel(1,'#FFA07A')">Formula</button>
+        <button onclick="showPanel(2,'#F8B88B')">Calculator</button>
+        <button onclick="showPanel(3,'#F660AB')">Animation</button>
+    </div>
+    <div class="tabPanel">
+        <h2>Projectlie Motion</h2>
+        <h3>Index</h3>
+        <p>
+            Projectile motion is the motion of an object thrown (projected) into the air when, 
+            after the initial force that launches the object, air resistance is negligible and the only 
+            other force that object experiences is the force of gravity. 
+            The object is called a projectile, and its path is called its trajectory.
+        </p>
+    </div>
+    <div class="tabPanel">
+        <p>
+            <img src="https://cdn1.byjus.com/wp-content/uploads/2020/07/Projectile-Motion-1.png" width="300" height="200">
+         </p>
+    </div>
+    <div class="tabPanel">
+        <table cellspacing="4" cellpadding="3" border="1">
+            <tr>
+                <td>Enter value of Initial velocity </td> 
+                <td><input id="u" placeholder="enter value in m/s"></td>
+                
+            </tr>
+            <tr>
+                <td>Enter value of angle of Projection</td>
+                <td><input id="theta" placeholder="enter value in radians"></td>
+            </tr>
+            <tr>
+                <td>
+                    <button onclick="Range()">Calculate</button>
+                </td>
+            </tr>
+            <tr>
+                <td>Range of projectile </td>
+                <td><input id="range" readOnly placeholder="range in meter"></td>
+            </tr>
+            <tr>
+                <td><button onclick="Height()">Calculate</button></td>
+            </tr>
+            <tr>
+                <td>Maximum Height </td>
+                <td><input id="h" readonly placeholder="height in meters"></td>
+            </tr>
+            <tr>
+                <td><button onclick="Time()">Calculate</button></td>
+            </tr>
+            <tr>
+                <td>Time of Flight</td>
+                <td><input id="t" placeholder="time in seconds"></td>
+            </tr>
+            <tr>
+                <td>
+                <button onclick="window.print()">Print</button>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="tabPanel">Tab 4:Content</div>
+</div>
+
+<script src="projectile-motion-tabs.js"></script>
+<script src="scrolltotop.js"></script>
+</body>
+</html>

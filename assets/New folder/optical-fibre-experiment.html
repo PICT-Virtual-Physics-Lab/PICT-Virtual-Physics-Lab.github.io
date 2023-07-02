@@ -1,0 +1,243 @@
+<html>
+<head>
+    <title>Optic Fiber</title>
+        <h1>Experiment 1</h1>
+        <h2>Optic Fiber</h2>
+        <h3>Theory</h3>
+        <pre>
+            Optical fibres works on the principle of total internal reflection. When light ray strikes at the internal surface of 
+            optical fibre cable called such that incidence angle is greater than critical angle, then incident light ray reflects 
+            in the same medium and this phenomenon repeats. In this way a light signal travels from one end of the cable to another end.
+        </pre>
+<script>
+function NumericalAperture()
+{
+om = parseInt(document.getElementById("outer_medium").value);
+clad = parseInt(document.getElementById("cladding").value);
+core = parseInt(document.getElementById("core").value);
+ if(core>clad){
+num1 = Math.pow(core,2) - Math.pow(clad,2);
+num2 = Math.pow(num1,0.5);
+numapp = num2/om;
+document.getElementById("answer1").value = num2;
+}if(core<clad)
+{
+op1 = "Enter core value greater than cladding"
+document.getElementById("answer1").value = op1;
+}
+}
+function fractionalindexchange()
+{
+om = parseInt(document.getElementById("outer_medium").value);
+clad = parseInt(document.getElementById("cladding").value);
+core = parseInt(document.getElementById("core").value);
+nume1 = core - clad;
+fracind = nume1/core;
+document.getElementById("answer2").value = fracind;
+}
+
+function criticalangle()
+{
+    clad = parseInt(document.getElementById("cladding").value);
+    core = parseInt(document.getElementById("core").value);
+    criangle = Math.asin(clad/core);
+    document.getElementById("answer3").value = criangle;   
+}
+function angleofacceptance()
+    {
+    om = parseInt(document.getElementById("outer_medium").value);
+    clad = parseInt(document.getElementById("cladding").value);
+    core = parseInt(document.getElementById("core").value);
+    num1 = Math.pow(core,2) - Math.pow(clad,2);
+    num2 = Math.pow(num1,0.5);
+    numapp = num2/om;
+    accangle = Math.asin(numapp);
+      if(-1<=accangle<=1){
+    document.getElementById("answer4").value = accangle;
+    }else
+    {
+      op2 = "Wrong values Entered"
+      document.getElementById("answer4").value = op2;
+    }
+    }
+</script>
+</head>
+<body> 
+<p>
+    <img src="https://global.canon/en/technology/s_labo/light/003/anigif/c003s008f001.gif" width="300" height="300">
+</p>    
+
+<!--<p >Enter refractive index of outer medium : <input id="outer_medium" placeholder="enter value"></p>
+<p >Enter refractive index of cladding : <input id="cladding" placeholder="enter value"></p>
+<p >Enter refractive index of core : <input id="core" placeholder="enter value"></p>-->
+<h2>Numerical Aperture</h2>
+<p>
+    <img src="https://questtel.com/img-qt/articles/aperture.jpg" width="300" height="200">
+
+</p>
+<pre>
+    The Numerical Aperture (NA) of a fiber is defined as the sine of the largest angle an 
+    incident ray can have for total internal reflectance in the core.Numerical Aperture is the
+    measure of the ability of an optical fiber to collect or confine the incident light ray inside it.
+    It is among the most basic property of optical fiber.
+
+</pre>
+
+<font size="5">
+    Numerical Aperture =
+            <b><em>
+                <math>
+                    <mfrac>
+                      <msqrt>
+                        <mi>n1&sup2 - n2&sup2</mi>
+                      </msqrt> 
+                    </mfrac>     
+                </math>
+            </b></em>
+</font>
+<!--<table>
+    <tbody>
+        <tr>
+            <td>Numerical Aperture =
+                <math>
+                    <mfrac>
+                      <msqrt>
+                        <mi>n1&sup2 - n2&sup2</mi>
+                      </msqrt> 
+                    </mfrac>     
+                </math>
+            </td>
+        </tr>
+    </tbody>
+</table>-->
+<br>
+<table cellspacing="4" cellpadding="3" border="1">
+    <tr>
+        <td>Enter refractive index of outer medium</td>
+        <td><input id="outer_medium" placeholder="enter value"></td>
+    </tr>
+    <tr>
+        <td>Enter refractive index of cladding</td>
+        <td><input id="cladding" placeholder="enter value"></td>
+    </tr>
+    <tr>
+        <td>Enter refractive index of core</td>
+        <td><input id="core" placeholder="enter value"></td>
+    </tr>
+    <tr>
+        <td colspan="2"><button onclick="NumericalAperture()">Calculate</button>  <input type="reset" name="reset" value="Reset"></td>
+    </tr>
+    <br><br>
+    <tr>
+
+    </tr>
+    <tr>
+        <td>Numerical Aperture</td>
+        <td><input id="answer1" readOnly placeholder="unitless" size="30"></td>
+    </tr>
+</table>
+<!--<button onclick="NumericalAperture()">Calculate</button>
+<p>Numerical Aperture = <input id="answer1" readOnly placeholder="unitless" size="30"></p>-->
+<h2>Angle of Acceptance</h2>
+<p>
+    <img src="https://edurev.gumlet.io/ApplicationImages/Temp/1611931_dce4ce43-4ca3-4d9e-9809-cfbbd04e5281_lg.PNG?w=400&dpr=2.6" width="300" height="200">
+</p>
+<pre>
+    Angle of Acceptance is the angle of incident at the outer medium - core boundary
+     for which angle of refraction at the core - cladding boundary is 90 degree
+ </pre>
+<!--<table>
+    <tbody>
+      <tr>
+        <td>Angle of Acceptance = sin<sup>-1</sup>(
+            <math>
+                <mfrac>
+                    <msqrt>
+                    <mi>n1&sup2 - n2&sup2</mi>
+                    </msqrt>
+                    <mi>n1</mi>
+                   </mfrac>
+            </math>
+        )</td>
+    </tbody>
+ </table>-->
+ 
+ Angle of Acceptance = sin<sup>-1</sup>(
+            <math>
+                <mfrac>
+                    <msqrt>
+                    <mi>n1&sup2 - n2&sup2</mi>
+                    </msqrt>
+                    <mi>n1</mi>
+                   </mfrac>
+            </math>
+        )
+ 
+ <br>
+    <button onclick="angleofacceptance()">Calculate</button>
+<p >Angle of Acceptance = <input id="answer4" placeholder="in radian" readOnly></p>
+<h2>Fractional Index Change</h2>
+<p>
+    <img src="https://image1.slideserve.com/2407281/fractional-index-change-l.jpg" width="300" height="200">
+</p>
+<pre>
+    Fractional Index Change is the fractional difference between the refractive indices of the core and the cladding
+    the ratio of the difference in the refractive index between the core and the cladding to the refractive index 
+    of core of the optical fiber.
+
+</pre>
+<!--<table>
+    <tbody>
+      <tr>
+        <td>Fractional Index Change = 
+            <math>
+                <mfrac>
+                    <mi>n1-n2</mi>
+                    <mi>n1</mi>
+                   </mfrac>
+            </math>
+        </td>
+    </tbody>
+ </table>-->
+ Fractional Index Change = 
+            <math>
+                <mfrac>
+                    <mi>n1-n2</mi>
+                    <mi>n1</mi>
+                   </mfrac>
+            </math>
+ <br>
+    <button onclick="fractionalindexchange()">Calculate</button>
+<p >Fractional Index Change = <input id="answer2" readonly placeholder="unitless"></p>
+<h2>Critical Angle</h2>
+<pre>
+   Critical Angle is the maximum angle such that light entering it is transmitted without being absorbed.
+</pre>
+<!--<table>
+    <tbody>
+        <tr>
+            <td>Critical Angle = sin<sup>-1</sup>(
+                <math>
+                    <mfrac>
+                        <mi>n2</mi>
+                        <mi>n1</mi>
+                    </mfrac>
+                </math>
+            )</td>
+        </tr>
+    </tbody>
+</table>-->
+Critical Angle = sin<sup>-1</sup>(
+                <math>
+                    <mfrac>
+                        <mi>n2</mi>
+                        <mi>n1</mi>
+                    </mfrac>
+                </math>
+            )
+<br>
+    <button onclick="criticalangle()">Calculate</button>
+<p >Critical Angle = <input id="answer3" placeholder="in radian" readonly></p>
+
+</body>
+</html> 

@@ -1,0 +1,238 @@
+<!doctype html5>
+<html>
+    <head>
+        <link rel="stylesheet" href="assets/css/physics-lab.css"> 
+        <title>Virtual Physics Lab</title>
+    </head>
+
+    <body>
+        <header>
+            <a href="#" class="logo">Logo</a>
+            <ul>
+                <li><a href="#" class="active">Home</a></li>
+                <li><a href="#Introduction">About Us</a></li>
+                <li><a href="#Experiments">Experiments</a></li>
+                <li><a href="#">References</a></li>
+            </ul>
+        </header><br><br><br><br>
+
+        <section>
+            <img src="images/index-title/stars.png" id="stars" width="1920px" height="1080px">
+            <img src="images/index-title/moon.png" id="moon" width="1920px" height="1080px">
+            <img src="images/index-title/mountains_behind.png" id="mountains_behind" width="1920px" height="1080px">
+            <div class="title" id="heading"><b>Virtual Physics Lab</b></div>
+            <a href="#Introduction" id="btn">Explore</a>
+            <img src="images/index-title/mountains_front.png" id="mountains_front" width="1920px" height="1080px">
+        </section>
+
+        <div class="Introduction" id="Introduction">
+            <div id="main-title">Virtual Physics Lab</div>
+            <br><br><br>
+            <p>
+                We are thrilled to introduce our virtual physics lab, which we have created with the aim of providing our fellow 
+                engineering students with an interactive and immersive learning experience. 
+                <br>As first-year engineering students, we understand the importance of practical experience in understanding the 
+                concepts of physics.<br><br>
+                We are proud of the results of our efforts, and we hope that our fellow students find the virtual lab as helpful 
+                and educational as we have.<br> 
+                However, we would like to note that while we have made every effort to ensure the accuracy and reliability of the 
+                lab, there may be discrepancies or errors that we have missed.<br><br> 
+                We, therefore, provide a disclaimer that the virtual lab is not a substitute for physical laboratory experience 
+                and that users should exercise caution and seek additional guidance from their instructors as needed.   
+                <ol type="numbers">
+                    <li>
+                        <h3>Hands-on Learning:</h3> 
+                        Virtual physics labs provide an interactive and immersive environment where students can engage in hands-on learning experiences. 
+                        They allow students to explore physics concepts and principles through simulations, experiments, and data analysis.
+                    </li>
+                    <li>
+                        <h3>Conceptual Understanding:</h3>
+                        Virtual physics labs aim to enhance students' conceptual understanding of physics by allowing them to observe and manipulate variables in controlled experiments. 
+                        This helps students develop a deeper understanding of how different physical phenomena and principles operate.
+                    </li>
+                    <li>
+                        <h3>Experimental Skills:</h3> 
+                        Virtual physics labs provide an opportunity for students to develop essential experimental skills, such as designing experiments, collecting and analyzing data, and drawing conclusions. 
+                        They can practice these skills in a virtual setting before performing actual experiments in a physical lab.
+                    </li>
+                    <li>
+                        <h3>Safety:</h3>
+                        Virtual physics labs offer a safe learning environment, particularly for experiments involving potentially hazardous materials or equipment. 
+                        Students can perform experiments virtually without any risk to themselves or the equipment, reducing the possibility of accidents.
+                    </li>
+                    
+                </ol> 
+                
+            </p>
+        </div>
+        <script>
+            let stars = document.getElementbyId('stars');
+            let moon = document.getElementbyId('moon');
+            let mountains_behind = document.getElementbyId('mountains_behind');
+            let mountains_front = document.getElementbyId('mountains_front');
+            let title = document.getElementById('title');
+            let btn = document.getElementById('btn');
+
+            window.addEventListener('scroll', function(){
+                var value = window.scrollY;
+                stars.style.top = value*0.5 +'px';
+                moon.style.right = value*1.25 +'px';
+            })
+        </script>
+
+<div class="flex-container" id="Experiments">
+    <div class="container">
+        <a href="optical-fibre-experiment.html">
+        <img src="images/index-title/IMG-20230504-WA0024.jpg">
+        <div class="img-text"><h3>Fiber Optics</h3></div>
+        </a>
+    </div>
+    <div class="container">
+        <a href="#">
+        <img src="images/index-title/IMG-20230504-WA0025.jpg">
+        <div class="img-text"><h3>Polarsiation - Malus Law</h3></div>
+        </a>
+        
+    </div>
+</div>
+<div class="flex-container">
+    <div class="container">
+        <a href="#">
+        <img src="images/index-title/IMG-20230504-WA0026.jpg">
+        <div class="img-text"><h3>Ultrasonic Inferometer</h3></div>
+        </a>
+    </img>
+    </div>
+    <div class="container">
+        <a href="#">
+        <img src="images/index-title/IMG-20230504-WA0027.jpg">
+        <div class="img-text"><h3>LASER</h3></div>
+        </a>
+        
+    </div>
+</div>
+    <!--<marquee behaviour="slide" loop><h3>A Combined Endeaveour of 5 FE Students</h3></marquee>-->   
+    <!--<ul>
+            <li><a href = "Interference.html">Interference</a>
+            <li><a href ="Dispersion.html">Dispersion</a>
+            <li><a href ="Single-slit-experiment.html">Single Slit Experiment</a>
+            <li><a href ="Multiple-slit-interference.html">Multiple Slit Interference</a>
+        </ul>
+    -->
+
+    
+    <!-- <div class="row">
+        <div class="column">
+          <img src="Laser_Interference.jpeg">
+          <img src="Laser_Interference.jpeg">    
+        </div>
+        <div class="column">
+            <img src="Laser_Interference.jpeg">
+            <img src="Laser_Interference.jpeg">
+        </div>    
+    </div>    
+    -->
+    
+    <!--<div class ="flex-container">
+    <div class="container">
+            <div class="image-1">
+                <div class="text">
+                    <a href ="optical-fibre-experiment.html"><h3>Fiber Optics</h3></a>
+                </div>
+            </div>
+    </div> 
+    <div class="container">
+        <a href ="Dispersion.html">
+            <img id="img-index" src="images\index-title\IMG-20230504-WA0025.jpg">
+            <span class="text"><h3>Polarsiation - Malus Law</h3></span>
+        </a>
+        
+    </div>
+    <div class="container">
+        <div class="image-2">
+            <div class="text">
+                <a href ="Dispersion.html"><h3>Polarsiation - Malus Law</h3></a>
+             </div>
+        </div>
+    </div>
+    </div>
+    <div class="flex-container">
+    <div class="container">
+        <div class="image-3">
+            <div class="text">
+                <a href ="Ultrasonic-Inferometer-experiment.html"><h3>Ultrasonic Inferometer</h3></a>
+             </div>
+        </div>
+    </div>    
+    <div class="container">
+        <div class="image-4">
+            <div class="text">
+                <a href = "Interference.html"><h3>LASER</h3></a>
+             </div>
+        </div>
+    </div> 
+    </div>   
+    -->
+       
+    <!--<table width ="80%" border="2" bordercolor ="#000000" cellpadding="5" cellspacing="5" align="center">
+            <tr>
+                <td background="Laser_Interference.jpeg" align="center"> 
+                
+                 <div class="container">
+                 <div class="image">
+
+                   </div>
+                  </div>
+                    <a href = "Interference.html">Interference</a></td>
+                <td align="center">
+                    <div class="container">
+                        <div class="image">
+                
+                        </div>
+                    </div>    
+                    <a href ="Dispersion.html">Dispersion</a></td>
+            </tr>
+            <tr>
+                <td align="center">
+                    <div class="container">
+                        <div class="image">
+                
+                        </div>
+                    </div>    
+                    <a href = "Single-slit-experiment.html">Single Slit Diffraction</a>
+                </td>
+                <td align="center">
+                    <div class="container">
+                        <div class="image">
+                
+                        </div>
+                    </div>    
+                    <a href ="Multiple-slit-interference.html">Multiple Slit Diffraction</a>
+                </td>
+            </tr>
+        </table>
+    -->          
+
+    <div class="flex-container">
+    <h1>About Us</h1>
+    <p>
+        We are thrilled to introduce our virtual physics lab, which we have created with the aim of providing our fellow 
+        engineering students with an interactive and immersive learning experience. 
+        <br>As first-year engineering students, we understand the importance of practical experience in understanding the 
+        concepts of physics.<br><br>
+        We are proud of the results of our efforts, and we hope that our fellow students find the virtual lab as helpful 
+        and educational as we have.<br> 
+        However, we would like to note that while we have made every effort to ensure the accuracy and reliability of the 
+        lab, there may be discrepancies or errors that we have missed.<br><br> 
+        We, therefore, provide a disclaimer that the virtual lab is not a substitute for physical laboratory experience 
+        and that users should exercise caution and seek additional guidance from their instructors as needed.               
+    </p>
+    </div>
+    <h2>Credits</h2>
+        <p>
+            1. Mr. Rohidas Mali<br>2. Mr. Vishnu Tanpure<br>3. Ayush Chanekar<br>4. Devashish Bhirdi<br>5. Harsh Modak<br>
+            6. Jaisingh Khandare<br>7. Pratik Survase
+        </p>    
+            
+    </body>
+</html>

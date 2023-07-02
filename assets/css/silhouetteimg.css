@@ -1,0 +1,220 @@
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/* body
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+} */
+.scientist-box{
+    background-color:#333;
+    display: flex;
+    flex-direction: column;
+    flex-basis: 50%;
+}
+.container1
+{
+    display: flex;
+    justify-content: center;
+    align-items:center;
+}
+.container1 .box1
+{
+    position: relative;
+    width: 650px;
+    height: 600px;
+    margin: 50px;
+}
+.container1 .box1 img
+{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    mix-blend-mode: screen;
+}
+.container1 .box1 .contentbx
+{
+    position: absolute;
+    top: 50px;
+    bottom: 50px;
+    right: 40px;
+    width: 35%;
+    display: flex;
+    justify-content: center;
+    align-items:center;
+    background: black;
+    transition: transform 0.5s;
+    transform-origin: right;
+    transform: scaleX(0);
+}
+.container1 .box1:hover .contentbx
+{
+    transition: transform 0.5s;
+    transform-origin: left;
+    transform: scaleX(1);
+}
+.container1 .box1 .contentbx .content
+{
+    position: relative;
+    padding: 20px 60px;
+    opacity: 0;
+}
+.container1 .box1:hover .contentbx .content
+{
+    opacity: 1;
+    transition: 0.5s;
+    transition-delay: 0.5s;
+}
+.container1 .box1 .contentbx .content h2
+{
+    color:aliceblue;
+    font-weight: 500;
+    margin-bottom: 10px;
+}
+.container1 .box1 .contentbx .content p
+{
+    color: aliceblue;
+    font-weight: 300;
+}
+.container2
+{
+    display: flex;
+    justify-content: center;
+    align-items:center;
+}
+.container2 .box1
+{
+    position: relative;
+    width: 650px;
+    height: 600px;
+    margin: 50px;
+}
+.container2 .box1 img
+{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    mix-blend-mode: screen;
+}
+.container2 .box1 .contentbx
+{
+    position: absolute;
+    top: 50px;
+    bottom: 50px;
+    right: 40px;
+    width: 35%;
+    display: flex;
+    justify-content: center;
+    align-items:center;
+    background: black;
+    transition: transform 0.5s;
+    transform-origin: right;
+    transform: scaleX(0);
+}
+.container2 .box1:hover .contentbx
+{
+    transition: transform 0.5s;
+    transform-origin: left;
+    transform: scaleX(1);
+}
+.container2 .box1 .contentbx .content
+{
+    position: relative;
+    padding: 20px 60px;
+    opacity: 0;
+}
+.container2 .box1:hover .contentbx .content
+{
+    opacity: 1;
+    transition: 0.5s;
+    transition-delay: 0.5s;
+}
+.container2 .box1 .contentbx .content h2
+{
+    color: aliceblue;
+    font-weight: 500;
+    margin-bottom: 10px;
+}
+.container2 .box1 .contentbx .content p
+{
+    color: aliceblue;
+    font-weight: 300;
+}
+.container3
+{
+    display: flex;
+    justify-content: center;
+    align-items:center;
+}
+.container3 .box1
+{
+    position: relative;
+    width: 800px;
+    height: 600px;
+    margin: 40px;
+}
+.container3 .box1 img
+{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    mix-blend-mode: screen;
+}
+.container3 .box1 .contentbx
+{
+    position: absolute;
+    top: 50px;
+    bottom: 50px;
+    right: 40px;
+    width: 35%;
+    display: flex;
+    justify-content: center;
+    align-items:center;
+    background: black;
+    transition: transform 0.5s;
+    transform-origin: right;
+    transform: scaleX(0);
+}
+.container3 .box1:hover .contentbx
+{
+    transition: transform 0.5s;
+    transform-origin: left;
+    transform: scaleX(1);
+}
+.container3 .box1 .contentbx .content
+{
+    position: relative;
+    padding: 20px 60px;
+    opacity: 0;
+}
+.container3 .box1:hover .contentbx .content
+{
+    opacity: 1;
+    transition: 0.5s;
+    transition-delay: 0.5s;
+}
+.container3 .box1 .contentbx .content h2
+{
+    color: aliceblue;
+    font-weight: 500;
+    margin-bottom: 10px;
+}
+.container3 .box1 .contentbx .content p
+{
+    color: aliceblue;
+    font-weight: 300;
+}

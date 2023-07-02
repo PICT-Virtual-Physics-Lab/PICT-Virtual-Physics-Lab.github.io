@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Tabs</title>
+    <link rel="stylesheet" type="text/css" href="experiment-tabs.css">
+    <!-- <link rel="Stylesheet" href="optic-fiber-experiment.css"> -->
+    <link rel="stylesheet" href="virtual-lab-sidebar.css">
+    <link rel="stylesheet" href="opticalfibre.css">
+    <div class="navbar">
+        <div class="navdiv">
+            <div class="logo"><a href="virtual-lab-paralax.html">Virtual Physics Lab</a></div>
+            <!-- <ul>
+                <li><a href="virtual-lab-paralax.html">Home</a></li>
+                <li><a href="optical-fibre-tabs.html">Fibre Optics</a></li>
+                <li><a href="Malus-law-tabs.html">Polarization-Malus Law</a></li>
+                <li><a href="ultrasonic-testing-tabs.html">Ultrasonic Inferometer</a></li>
+                <li><a href="laser-tabs.html">Laser</a></li>
+                <li><a href="projectile-motion-tabs.html">Projectile Motion</a></li>
+            </ul> -->
+        </div>
+    </div>
+    <script>
+        function NumericalAperture()
+        {
+        om = parseFloat(document.getElementById("outer_medium").value);
+        clad = parseFloat(document.getElementById("cladding").value);
+        core = parseFloat(document.getElementById("core").value);
+        num1 = Math.pow(core,2) - Math.pow(clad,2);
+        num2 = Math.pow(num1,0.5);
+        numapp = num2/om;
+        document.getElementById("answer1").value = num2;
+    
+        }
+        function fractionalindexchange()
+        {
+        om = parseFloat(document.getElementById("outer_medium").value);
+        clad = parseFloat(document.getElementById("cladding").value);
+        core = parseFloat(document.getElementById("core").value);
+        nume1 = core - clad;
+        fracind = nume1/core;
+        document.getElementById("answer2").value = fracind;
+        }
+        
+        function criticalangle()
+        {
+            clad = parseFloat(document.getElementById("cladding").value);
+            core = parseFloat(document.getElementById("core").value);
+            criangle = Math.asin(clad/core);
+            document.getElementById("answer3").value = criangle;   
+        }
+        function angleofacceptance()
+            {
+            om = parseFloat(document.getElementById("outer_medium").value);
+            clad = parseFloat(document.getElementById("cladding").value);
+            core = parseFloat(document.getElementById("core").value);
+            num1 = Math.pow(core,2) - Math.pow(clad,2);
+            num2 = Math.pow(num1,0.5);
+            numapp = num2/om;
+            accangle = Math.asin(numapp);
+              if(-1<=accangle<=1){
+            document.getElementById("answer4").value = accangle;
+            }else
+            {
+              op2 = "Wrong values Entered"
+              document.getElementById("answer4").value = op2;
+            }
+            }
+        function animation()
+        {
+            entang = document.getElementById("enterangle").value;
+            clad = parseFloat(document.getElementById("cladding").value);
+            core = parseFloat(document.getElementById("core").value);
+            criangle = Math.asin(clad/core);
+            if (entang<criangle){
+                document.getElementById("animation")="https://im.ezgif.com/tmp/ezgif-1-1caaca4324.gif";
+            }
+            else{
+                document.getElementById("animation")="https://im.ezgif.com/tmp/ezgif-1-8389821e1b.gif";
+            }
+        }
+        </script>
+</head>
+<body style="padding: 20px">
+    <div id="progress">
+        <span id="progress-value">&#x1F815;</span>
+    </div>
+<h1 class="title">Optic Fibre</h1>
+<div class="tabContainer">
+    <div class="buttonContainer">
+        <button onclick="showPanel(0,'#FFDAB9')">Theory</button>
+        <button onclick="showPanel(1,'#FFA07A')">Formulae</button>
+        <button onclick="showPanel(2,'#F8B88B')">Calculator</button>
+        <button onclick="showPanel(3,'#F660AB')">Animation</button>
+    </div>
+    <div class="tabPanel">
+        <h2>Optic Fiber</h2>
+        <h3>Theory</h3>
+        <div class="Theory">
+            Optical fibres works on the principle of total internal reflection. When light ray strikes at the internal surface of 
+            optical fibre cable called such that incidence angle is greater than critical angle, then incident light ray reflects 
+            in the same medium and this phenomenon repeats. In this way a light signal travels from one end of the cable to another end.
+        </div>
+    
+    </div>
+    <div class="tabPanel">
+        <p>
+            <img src="https://global.canon/en/technology/s_labo/light/003/anigif/c003s008f001.gif" width="300" height="300">
+        </p>  
+        <p>
+            <img src="https://questtel.com/img-qt/articles/aperture.jpg" width="300" height="200">
+        
+        </p>
+        <font size="5">
+            Numerical Aperture =
+                    <b><em>
+                        <math>
+                            <mfrac>
+                              <msqrt>
+                                <mi>n1&sup2 - n2&sup2</mi>
+                              </msqrt> 
+                            </mfrac>     
+                        </math>
+                    </b></em>
+        </font>
+        <p>
+            <img src="https://edurev.gumlet.io/ApplicationImages/Temp/1611931_dce4ce43-4ca3-4d9e-9809-cfbbd04e5281_lg.PNG?w=400&dpr=2.6" width="300" height="200">
+        </p>
+        <p>
+            <img src="https://image1.slideserve.com/2407281/fractional-index-change-l.jpg" width="300" height="200">
+        </p>
+        Fractional Index Change = 
+            <math>
+                <mfrac>
+                    <mi>n1-n2</mi>
+                    <mi>n1</mi>
+                   </mfrac>
+            </math>
+            <br>
+            Critical Angle = sin<sup>-1</sup>(
+                <math>
+                    <mfrac>
+                        <mi>n2</mi>
+                        <mi>n1</mi>
+                    </mfrac>
+                </math>
+            )
+    </div>
+    <div class="tabPanel">
+        <div class="table">
+        <table cellspacing="4" cellpadding="3" border="1">
+            <tr>
+                <td>Enter refractive index of outer medium</td>
+                <td><input id="outer_medium" placeholder="enter value"></td>
+            </tr>
+            <tr>
+                <td>Enter refractive index of cladding</td>
+                <td><input id="cladding" placeholder="enter value"></td>
+            </tr>
+            <tr>
+                <td>Enter refractive index of core</td>
+                <td><input id="core" placeholder="enter value"></td>
+            </tr>
+            <tr>
+                <td>Enter Angle of Entrance</td>
+                <td><input id="enterangle" placeholder="enter value"></td>
+            </tr>
+            <tr>
+                <td colspan="2"><button onclick="NumericalAperture()">Calculate</button>  <input type="reset" name="reset" value="Reset"></td>
+            </tr>
+            <br><br>
+            <tr>
+        
+            </tr>
+            <tr>
+                <td>Numerical Aperture</td>
+                <td><input id="answer1" readOnly placeholder="unitless" size="30"></td>
+            </tr>
+            <tr>
+                <td><button onclick="angleofacceptance()">Calculate</button></td>
+            </tr>
+            <tr>
+                <td>Angle of Acceptance</td>
+                <td><input id="answer4" placeholder="in radian" readOnly></td>
+            </tr>
+            <tr>
+                <td><button onclick="fractionalindexchange()">Calculate</button></td>
+            </tr>
+            <tr>
+                <td>Fractional Index Change</td>
+                <td><input id="answer2" readonly placeholder="unitless"></td>
+            </tr>
+            <tr>
+                <td><button onclick="criticalangle()">Calculate</button></td>
+            </tr>
+            <tr>
+                <td>Critical Angel</td>
+                <td><input id="answer3" placeholder="in radian" readonly></td>
+            </tr>
+            <tr>
+                <td><button onclick="">Animation</td>
+            </tr>
+            <tr>
+                <td><input id="animation" type="image" src="https://media.geeksforgeeks.org/wp-content/uploads/20200420095817/Optical-Fiber.png"></td>
+            </tr>
+            <tr>
+                <td></td>
+            </tr>
+            <tr>
+                <td>
+                <button onclick="window.print()">Print</button>
+                </td>
+            </tr>
+        </table>
+        </div>
+    </div>
+    <div class="tabPanel">Tab 4:Content</div>
+</div>
+
+<script src="optical-fibre-tabs.js"></script>
+<script src="scrolltotop.js"></script>
+</body>
+</html>
