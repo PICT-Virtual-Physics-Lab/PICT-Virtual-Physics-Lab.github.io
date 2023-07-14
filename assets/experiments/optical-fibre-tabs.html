@@ -8,6 +8,7 @@
     <!-- <link rel="Stylesheet" href="optic-fiber-experiment.css"> -->
     <link rel="stylesheet" href="virtual-lab-sidebar.css">
     <link rel="stylesheet" href="opticalfibre.css">
+    <link rel="stylesheet" href="opticalfibrecalci.css">
     <div class="navbar">
         <div class="navdiv">
             <div class="logo"><a href="../../index.html">Virtual Physics Lab</a></div>
@@ -178,6 +179,127 @@
             )
     </div>
     <div class="tabPanel">
+        <div class="container">
+            <div class="calculator">
+                <form>
+                    <div class="display">
+                        <input type="text" name="display" id="display" readonly>
+                    </div>
+                    <div class="display">
+                        <input type="text" name="display1" id="display1" readonly>
+                    </div>
+                    <div>
+                        <input type="button" value="AC" onclick="display.value= '' ">
+                        <input type="button" value="DE" onclick="display.value = display.value.toString().slice(0,-1)">
+                        <input type="button" value="AC1" onclick="display1.value = '' ">
+                        <input type="button" value="DE1" onclick="display1.value = display1.value.toString().slice(0,-1)">
+                        <input type="button" value="." onclick="display.value += '.' ">
+                        <input type="button" value="=" onclick="display.value = eval(display.value)" class="equalbtn">
+                    </div>
+                    <div>
+                        <input type="button" value="7" onclick="display.value += '7' ">
+                        <input type="button" value="8" onclick="display.value += '8' ">
+                        <input type="button" value="9" onclick="display.value += '9' ">
+                        <input type="button" value="*" onclick="display.value += '*' ">
+                        <input type="button" value="Numerical Apperture" onclick="NumericalAperture()" class="optbtn">
+                    </div>
+                    <div>
+                        <input type="button" value="4" onclick="display.value += '4' ">
+                        <input type="button" value="5" onclick="display.value += '5' ">
+                        <input type="button" value="6" onclick="display.value += '6' ">
+                        <input type="button" value="-" onclick="display.value += '-' ">
+                        <input type="button" value="Fractional Change" onclick="fractionalindexchange()" class="optbtn">
+                    </div>
+                    <div>
+                        <input type="button" value="1" onclick="display.value += '1' ">
+                        <input type="button" value="2" onclick="display.value += '2' ">
+                        <input type="button" value="3" onclick="display.value += '3' ">
+                        <input type="button" value="+" onclick="display.value += '+' ">
+                        <input type="button" value="Critical Angle" onclick="criticalangle()" class="optbtn">
+                    </div>
+                    <div>
+                        <input type="button" value="(" onclick="display.value += '(' ">
+                        <input type="button" value="0" onclick="display.value += '0' ">
+                        <input type="button" value=")" onclick="display.value += ')' ">
+                        <input type="button" value="/" onclick="display.value += '/' ">
+                        <input type="button" value="Acceptance of Angle" onclick="angleofacceptance()" class="optbtn">
+        
+                    </div>
+                    <div>
+                        <input type="button" value="Outer Medium" class="inbtn">
+                        <input type="text" class="value" id="outer_medium" placeholder="Enter value">
+                        <input type="button" value="Cladding" class="inbtn">
+                        <input type="text" class="value" id="cladding" placeholder="Enter value">
+                    </div>
+                    <div>
+                        <input type="button" value="Core" class="inbtn">
+                        <input type="text" class="value" id="core" placeholder="Enter value">
+                        <input type="button" value="Enter Angle" class="inbtn">
+                        <input type="text" class="value" id="enterangle" placeholder="Enter value">
+                    </div>
+                  </form>  
+            </div>
+        </div>
+        <script>
+            function NumericalAperture()
+            {
+            om = parseFloat(document.getElementById("outer_medium").value);
+            clad = parseFloat(document.getElementById("cladding").value);
+            core = parseFloat(document.getElementById("core").value);
+            num1 = Math.pow(core,2) - Math.pow(clad,2);
+            num2 = Math.pow(num1,0.5);
+            numapp = num2/om;
+            document.getElementById("display1").value = num2;
+        
+            }
+            function fractionalindexchange()
+            {
+            om = parseFloat(document.getElementById("outer_medium").value);
+            clad = parseFloat(document.getElementById("cladding").value);
+            core = parseFloat(document.getElementById("core").value);
+            nume1 = core - clad;
+            fracind = nume1/core;
+            document.getElementById("display1").value = fracind;
+            }
+            
+            function criticalangle()
+            {
+                clad = parseFloat(document.getElementById("cladding").value);
+                core = parseFloat(document.getElementById("core").value);
+                criangle = Math.asin(clad/core);
+                document.getElementById("display1").value = criangle;   
+            }
+            function angleofacceptance()
+                {
+                om = parseFloat(document.getElementById("outer_medium").value);
+                clad = parseFloat(document.getElementById("cladding").value);
+                core = parseFloat(document.getElementById("core").value);
+                num1 = Math.pow(core,2) - Math.pow(clad,2);
+                num2 = Math.pow(num1,0.5);
+                numapp = num2/om;
+                accangle = Math.asin(numapp);
+                  if(-1<=accangle<=1){
+                document.getElementById("display1").value = accangle;
+                }else
+                {
+                  op2 = "Wrong values Entered"
+                  document.getElementById("display1").value = op2;
+                }
+                }
+            function animation()
+            {
+                entang = document.getElementById("enterangle").value;
+                clad = parseFloat(document.getElementById("cladding").value);
+                core = parseFloat(document.getElementById("core").value);
+                criangle = Math.asin(clad/core);
+                if (entang<criangle){
+                    document.getElementById("animation")="https://im.ezgif.com/tmp/ezgif-1-1caaca4324.gif";
+                }
+                else{
+                    document.getElementById("animation")="https://im.ezgif.com/tmp/ezgif-1-8389821e1b.gif";
+                }
+            }
+        </script>
         <div class="table">
         <table cellspacing="4" cellpadding="3" border="1">
             <tr>
