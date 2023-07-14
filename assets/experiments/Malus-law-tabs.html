@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="circular-nav-menu.css">
     <link rel="stylesheet" href="virtual-lab-sidebar.css">
     <link rel="stylesheet " href="maluslaw.css">
+    <link rel="stylesheet " href="../css/maluslawcalci.css">
     <nav class="navbar">
         <div class="navdiv">
             <div class="logo"><a href="../../index.html">Virtual Physics Lab</a></div>
@@ -96,7 +97,88 @@
             </div>
     </div>
     <div class="tabPanel">
-        <table cellspacing="4" cellpadding="3" border="1">
+        <div class="container">
+            <div class="calculator">
+                <form>
+                    <div class="display">
+                        <input type="text" name="display" id="display" readonly>
+                    </div>
+                    <div class="display">
+                        <input type="text" name="display1" id="display1" readonly>
+                    </div>
+                    <div>
+                        <input type="button" value="AC" onclick="display.value= '' ">
+                        <input type="button" value="DE" onclick="display.value = display.value.toString().slice(0,-1)">
+                        <input type="button" value="AC1" onclick="display1.value = '' ">
+                        <input type="button" value="DE1" onclick="display1.value = display1.value.toString().slice(0,-1)">
+                        <input type="button" value="." onclick="display.value += '.' ">
+                    </div>
+                    <!-- <div>
+                        <input type="button" value="Range" onclick="display.value += range" class="Range">
+                        <input type="button" value="Time" onclick="display.value += time" class="Time">
+                        <input type="button" value="Height" onclick="display.value += height" class="Height"> 
+                        <input type="button" id="range" value="Range" onclick="Range()">
+                        <input type="button" id="time" value="Time" onclick="Time()">
+                        <input type="button" id="height" value="Height" onclick="Height()">
+                    <div> -->
+                    <div>
+                        <input type="button" value="7" onclick="display.value += '7' ">
+                        <input type="button" value="8" onclick="display.value += '8' ">
+                        <input type="button" value="9" onclick="display.value += '9' ">
+                        <input type="button" value="*" onclick="display.value += '*' ">
+                        <input type="button" id="I1" value="Intensity after
+         polarizer" onclick="answer1()" class="outputbtn">
+                    </div>
+                    <div>
+                        <input type="button" value="4" onclick="display.value += '4' ">
+                        <input type="button" value="5" onclick="display.value += '5' ">
+                        <input type="button" value="6" onclick="display.value += '6' ">
+                        <input type="button" value="-" onclick="display.value += '-' ">
+                        <input type="button" id="I2" value="Intensity after 
+        analyzer" onclick="answer2()" class="outputbtn">
+                    </div>
+                    <div>
+                        <input type="button" value="1" onclick="display.value += '1' ">
+                        <input type="button" value="2" onclick="display.value += '2' ">
+                        <input type="button" value="3" onclick="display.value += '3' ">
+                        <input type="button" value="+" onclick="display.value += '+' ">
+                    </div>
+                    <div>
+                        <input type="button" value="(" onclick="display.value += '(' ">
+                        <input type="button" value="0" onclick="display.value += '0' ">
+                        <input type="button" value=")" onclick="display.value += ')' ">
+                        <input type="button" value="/" onclick="display.value += '/' ">
+                        <input type="button" value="=" onclick="display.value = eval(display.value)" class="equalbtn">
+                    </div>
+                    <div>
+                        <input type="button" value="UPL">
+                        <input type="text" class="value" id="upl" placeholder="Enter intensity of unpolarizer light">
+                    </div>
+                    <div>
+                        <input type="button" value="Angle">
+                        <input type="text" class="value" id="theta" placeholder="between polarizer & analyzer in radians">
+                    </div>
+                  </form>  
+            </div>
+        </div>
+        <script>
+            function answer1()
+        {
+        upl = parseFloat(document.getElementById("upl").value);
+        ang = parseFloat(document.getElementById("theta").value);
+        i1 = upl/2;
+        document.getElementById("display1").value = i1;
+        }
+            function answer2()
+        {
+        upl = parseFloat(document.getElementById("upl").value);
+        ang = parseFloat(document.getElementById("theta").value);
+        i1 = upl/2;
+        i2 = i1*Math.pow(Math.cos(ang),2);
+        document.getElementById("display1").value = i2;
+        }
+        </script>
+        <!-- <table cellspacing="4" cellpadding="3" border="1">
             <tr>
                 <td>Enter intensity of Unpolarized light(I<sub>o</sub>)</td>
                 <td><input id="upl" placeholder="enter value"></td>
@@ -124,7 +206,7 @@
                 <button onclick="window.print()">Print</button>
                 </td>
             </tr>
-        </table>
+        </table> -->
     </div>
     <div class="tabPanel">Tab 4:Content
         <style>
