@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="circular-nav-menu.css">
     <link rel="stylesheet" href="virtual-lab-sidebar.css">
     <link rel="stylesheet" href="projectilemotion.css">
+    <link rel="stylesheet" href="../css/projectilecalci.css">
     <nav class="navbar">
         <div class="navdiv">
             <div class="logo"><a href="../../index.html">Virtual Physics Lab</a></div>
@@ -123,7 +124,106 @@
          </p>
     </div>
     <div class="tabPanel">
-        <table cellspacing="4" cellpadding="3" border="1">
+        <div class="container">
+            <div class="calculator">
+                <form>
+                    <div class="display">
+                        <input type="text" name="display" id="display" readonly>
+                    </div>
+                    <div class="display">
+                        <input type="text" name="display1" id="display1" readonly>
+                    </div>
+                    <div>
+                        <input type="button" value="AC" onclick="display.value= '' ">
+                        <input type="button" value="DE" onclick="display.value = display.value.toString().slice(0,-1)">
+                        <input type="button" value="AC1" onclick="display1.value = '' ">
+                        <input type="button" value="DE1" onclick="display1.value = display1.value.toString().slice(0,-1)">
+                        <input type="button" value="." onclick="display.value += '.' ">
+                    </div>
+                    <div>
+                        <input type="button" value="7" onclick="display.value += '7' ">
+                        <input type="button" value="8" onclick="display.value += '8' ">
+                        <input type="button" value="9" onclick="display.value += '9' ">
+                        <input type="button" value="*" onclick="display.value += '*' ">
+                        <input type="button" id="range" value="Range" onclick="Range()">
+                    </div>
+                    <div>
+                        <input type="button" value="4" onclick="display.value += '4' ">
+                        <input type="button" value="5" onclick="display.value += '5' ">
+                        <input type="button" value="6" onclick="display.value += '6' ">
+                        <input type="button" value="-" onclick="display.value += '-' ">
+                        <input type="button" id="height" value="Height" onclick="Height()">
+                    </div>
+                    <div>
+                        <input type="button" value="1" onclick="display.value += '1' ">
+                        <input type="button" value="2" onclick="display.value += '2' ">
+                        <input type="button" value="3" onclick="display.value += '3' ">
+                        <input type="button" value="+" onclick="display.value += '+' ">
+                        <input type="button" id="time" value="Time" onclick="Time()">
+                    </div>
+                    <div>
+                        <input type="button" value="(" onclick="display.value += '(' ">
+                        <input type="button" value="0" onclick="display.value += '0' ">
+                        <input type="button" value=")" onclick="display.value += ')' ">
+                        <input type="button" value="/" onclick="display.value += '/' ">
+                        <input type="button" value="=" onclick="display.value = eval(display.value)">
+                    </div>
+                    <div>
+                        <input type="button" value="Speed">
+                        <input type="text" class="value" id="u" placeholder="Enter initial speed">
+                    </div>
+                    <div>
+                        <input type="button" value="Angle">
+                        <input type="text" class="value" id="theta" placeholder="Enter angle in radians">
+                    </div>
+                  </form>  
+            </div>
+        </div>
+        <script>
+        function Range()
+        {
+                vel = parseFloat(document.getElementById("u").value);
+                ang = parseFloat(document.getElementById("theta").value);
+                g = 9.81;
+                sin = Math.sin(2*ang);
+                if(0<=sin)
+             {
+                range = (Math.pow(vel,2)*Math.sin(2*ang))/g;
+                document.getElementById("display1").value = range;
+             }
+                if(0>sin)
+            {
+                range = "Wrong values Entered"
+                document.getElementById("display1").value = range;
+            }
+        }    
+             function Height()
+             {
+                vel = parseFloat(document.getElementById("u").value);
+                ang = parseFloat(document.getElementById("theta").value);
+                g = 9.81;
+                height = (Math.pow(vel,2)*Math.pow(Math.sin(ang),2))/2*g;
+                document.getElementById("display1").value = height;
+             }
+             function Time()
+             {
+                vel = parseFloat(document.getElementById("u").value);
+                ang = parseFloat(document.getElementById("theta").value);
+                g = 9.81;
+                sin = Math.sin(ang);
+                if(0<=sin)
+                {  
+                time = (2*vel*Math.sin(ang))/g;
+                document.getElementById("display1").value = time;
+                }
+                if(0>sin)
+                {
+                    time = "Wrong values Entered";
+                    document.getElementById("display1").value = time;
+                }
+             } 
+            </script>
+        <!-- <table cellspacing="4" cellpadding="3" border="1">
             <tr>
                 <td>Enter value of Initial velocity </td> 
                 <td><input id="u" placeholder="enter value in m/s"></td>
@@ -161,7 +261,7 @@
                 <button onclick="window.print()">Print</button>
                 </td>
             </tr>
-        </table>
+        </table> -->
     </div>
     <div class="tabPanel"><img src="../images/gifs/Presentation1.gif" alt="" srcset=""></div>
 </div>

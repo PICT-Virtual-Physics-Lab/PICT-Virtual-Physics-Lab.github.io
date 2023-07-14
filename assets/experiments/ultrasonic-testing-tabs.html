@@ -8,6 +8,7 @@
     <!-- <link rel="stylesheet" href="Ultrasonic-experiment.css"> -->
     <link rel="stylesheet" href="virtual-lab-sidebar.css">
     <link rel="stylesheet" href="ultrasonic.css"> 
+    <link rel="stylesheet" href="../css/ultrasoniccalci.css">
     <nav class="navbar">
         <div class="navdiv">
             <div class="logo"><a href="../../index.html">Virtual Physics Lab</a></div>
@@ -120,7 +121,106 @@
         
     </div>
     <div class="tabPanel">
-        <table>
+        <div class="container">
+            <div class="calculator">
+                <form>
+                    <div class="display">
+                        <input type="text" name="display" id="display" readonly>
+                    </div>
+                    <div class="display">
+                        <input type="text" name="display1" id="display1" readonly>
+                    </div>
+                    <div class="display">
+                        <input type="text" name="display2" id="display2" readonly placeholder="flaw height from top">
+                    </div>
+                    <div>
+                        <input type="button" value="AC" onclick="display.value= '' ">
+                        <input type="button" value="DE" onclick="display.value = display.value.toString().slice(0,-1)">
+                        <input type="button" value="AC1" onclick="display1.value = '',display2.value = '' ">
+                        <input type="button" value="DE1" onclick="display1.value = display1.value.toString().slice(0,-1),display2.value = display2.value.toString().slice(0,-1)">
+                        <input type="button" value="." onclick="display.value += '.' ">
+                        <input type="button" value="*" onclick="display.value += '*' ">
+                    </div>
+                    <!-- <div>
+                        <input type="button" value="Range" onclick="display.value += range" class="Range">
+                        <input type="button" value="Time" onclick="display.value += time" class="Time">
+                        <input type="button" value="Height" onclick="display.value += height" class="Height"> 
+                        <input type="button" id="range" value="Range" onclick="Range()">
+                        <input type="button" id="time" value="Time" onclick="Time()">
+                        <input type="button" id="height" value="Height" onclick="Height()">
+                    <div> -->
+                    <div>
+                        <input type="button" value="7" onclick="display.value += '7' ">
+                        <input type="button" value="8" onclick="display.value += '8' ">
+                        <input type="button" value="9" onclick="display.value += '9' ">
+                        <input type="button" value="-" onclick="display.value += '-' ">
+                        <input type="button" value="+" onclick="display.value += '+' ">
+                        <input type="button" value="/" onclick="display.value += '/' ">
+                        
+                    </div>
+                    <div>
+                        <input type="button" value="4" onclick="display.value += '4' ">
+                        <input type="button" value="5" onclick="display.value += '5' ">
+                        <input type="button" value="6" onclick="display.value += '6' ">
+                        <input type="button" value="(" onclick="display.value += '(' ">
+                        <input type="button" value="0" onclick="display.value += '0' ">
+                        <input type="button" value=")" onclick="display.value += ')' ">
+                    </div>
+                    <div>
+                        <input type="button" value="1" onclick="display.value += '1' ">
+                        <input type="button" value="2" onclick="display.value += '2' ">
+                        <input type="button" value="3" onclick="display.value += '3' ">
+                        <input type="button" value="=" onclick="display.value = eval(display.value)">
+                        <input type="button" id="distance" value="Detect Flaw" onclick="Distance()" class="outputbtn">
+                                        
+                    </div>
+                    <div>
+        
+        
+                    </div>
+                    <div>
+                        <input type="button" value="Material Height" class="inputbtn">
+                        <input type="text" class="value" id="Ep" placeholder="Enter height in cm">
+                    </div>
+                    <div>
+                        <input type="button" value="Pulse Frequency" class="inputbtn">
+                        <input type="text" class="value" id="Fr" placeholder="Enter value in Hz">
+                    </div>
+                    <div>
+                        <input type="button" value="Recorded time" class="inputbtn">
+                        <input type="text" class="value" id="t" placeholder="Enter value in seconds">
+                    </div>
+                  </form>  
+            </div>
+        </div>
+        <script>
+            function Distance()
+        {   height = parseFloat(document.getElementById("Ep").value);
+            frequency = parseFloat(document.getElementById("Fr").value);
+            time = parseFloat(document.getElementById("t").value);
+            dis = (frequency*time)/2;
+            if(height>dis){
+            op1 = "Flaw Detected"
+            document.getElementById("display1").value = op1;
+            document.getElementById("display2").value = dis;
+            }
+            if(height==dis)
+             {
+             op2 = "No Flaw detected"
+             op3 = "-"
+             document.getElementById("display1").value = op2;
+             document.getElementById("display2").value = op3;
+             }
+            if(height<dis)
+            {
+             op4 = "Wrong values entered"
+             op5 = "-"
+             document.getElementById("display1").value = op4;
+             document.getElementById("display2").value = op5; 
+            }
+        } 
+        </script>
+        <!-- <table>
             <tr>
                 <td>
                     <table cellspacing="4" cellpadding="3" border="1">
@@ -164,7 +264,7 @@
                 <button onclick="window.print()">Print</button>
                 </td>
             </tr>
-        </table>
+        </table> -->
         
     </div>
     <div class="tabPanel">
