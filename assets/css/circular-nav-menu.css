@@ -39,7 +39,7 @@
   padding: 22px;
   list-style: none;
   position: absolute;
-  transform-origin: 150px;
+  transform-origin: 11.82vw;
   transition: 1s;
   transition-delay:calc(0.15s*3.14/4 * var(--i));
   border-radius: 12px;
@@ -49,8 +49,8 @@
 }
 .menutoggle{
   position:absolute;
-  width: 70px;
-  height: 70px;
+  width: 5.5vw;
+  height: 5.5vw;
   background-color: aliceblue; 
   display: flex;
   justify-content: center;
@@ -77,7 +77,7 @@
   display: flex;
   justify-content:center;
   align-items: center;
-  height: 10px;
+  height: 1vw;
 }
 
 .experiment-menu{
@@ -110,6 +110,7 @@
   display: block;
 }
 #i3{ 
-  height: 2.25em;
+  min-height: 1vw;
+  padding-bottom: 0.5vw;
 }
 
