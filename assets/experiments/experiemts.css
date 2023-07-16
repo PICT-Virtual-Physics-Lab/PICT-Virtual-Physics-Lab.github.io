@@ -1,8 +1,10 @@
-body{
-    background-color: #060c21;
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-family: Arial, sans-serif;
 }
 .title{
-    font-family: Arial, sans-serif;
     background: linear-gradient(to right,#D8B5FF,#1EAE98);
     text-align: center;
     padding: 1.5%;
