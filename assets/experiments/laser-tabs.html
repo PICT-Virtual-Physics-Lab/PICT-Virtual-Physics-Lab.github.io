@@ -3,22 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <title>Laser</title>
-    <link rel="stylesheet" type="text/css" href="experiment-tabs.css">
-    <link rel="stylesheet" href="circular-nav-menu.css">
-    <link rel="stylesheet" href="virtual-lab-sidebar.css">
-    <link rel="stylesheet" href="laser.css">
+    <link rel="stylesheet" type="text/css" href="../css/experiment-tabs.css">
+    <link rel="stylesheet" href="../css/circular-nav-menu.css">
+    <link rel="stylesheet" href="../css/virtual-lab-sidebar.css">
+    <link rel="stylesheet" href="../css/experiemts.css">
+    <link rel="stylesheet" href="../css/custom-scroll-bar.css">
     <link rel="stylesheet" href="../css/lasercalci.css">
      <nav class="navbar">
         <div class="navdiv">
             <div class="logo"><a href="../../index.html">Virtual Physics Lab</a></div>
-            <!-- <ul>
-                <li><a href="virtual-lab-paralax.html">Home</a></li>
-                <li><a href="optical-fibre-tabs.html">Fibre Optics</a></li>
-                <li><a href="Malus-law-tabs.html">Polarization-Malus Law</a></li>
-                <li><a href="ultrasonic-testing-tabs.html">Ultrasonic Inferometer</a></li>
-                <li><a href="laser-tabs.html">Laser</a></li>
-                <li><a href="projectile-motion-tabs.html">Projectile Motion</a></li>
-            </ul> -->
         </div>
     </nav>
     <script>
@@ -34,11 +27,6 @@
         delta = n*(a+b)*Math.sin(ang);
         document.getElementById("delta").value = delta;
         }
-//         function Delta()
-// {
-//         delta = n*(a+b)*Math.sin(ang);
-//         document.getElementById("delta").value = delta;
-//}
         function PSi()
 {
         psi = (2*pi*n*(a+b)*Math.sin(ang))/lam;
@@ -116,9 +104,8 @@
         <button onclick="showPanel(2)">Calculator</button>
         <button onclick="showPanel(3)">Animation</button>
     </div>
-    <div class="tabPanel">
+    <div class="tabPanel"id="tabpanel1">
         <h3>Theory</h3>
-        <div class="flex-container"></div>
         <div class="para1" style="text-align: left; padding: 2rem 1.5rem 1.5rem;">
             Multiple-slit diffraction is a phenomenon of waves. An important property of a wave is its wavelength. <br>
             The wavelength is the distance over which the wave makes one full cycle. 
@@ -140,12 +127,13 @@
 
         </div>
     </div>
-    <div class="tabPanel">
+    <div class="tabPanel" id="tabpanel2">
         <div>
-            <img src="https://www.leybold-shop.com/media/phk/images/versuche/P5312_Laser.jpg" width="200" height="300">
+            <img src="../images/experiments/laser/laser-interference2.jpg">
+            <img src="../images/experiments/laser/laser-fomulae.jpg" alt="" srcset="">
         </div>
     </div>
-    <div class="tabPanel">
+    <div class="tabPanel" id="tabpanel3">
         <div class="container">
             <div class="calculator">
                 <form>
@@ -221,34 +209,37 @@
                     </div>
                     <div>
                         <input type="button" value="Lambda" class="inputbtn">
-                        <input type="text" class="value" id="lambda" placeholder="Enter height in cm">
+                        <input type="text" class="value" id="lambda" placeholder="Height in cm">
                     </div>
                     <div class="value2">
                     <div>
                         <input type="button" value="a" class="inputbtn1">
-                        <input type="text" class="value1" id="a" placeholder="Enter value in Hz">
+                        <input type="text" class="value1" id="a" placeholder="Value in Hz">
                     </div>
                     <div>
                         <input type="button" value="b" class="inputbtn1">
-                        <input type="text" class="value1" id="b" placeholder="Enter value in seconds">
-                    </div>
-                    <div>
-                        <input type="button" value="N" class="inputbtn1">
-                        <input type="text" class="value1" id="n" placeholder="Enter value in seconds">
+                        <input type="text" class="value1" id="b" placeholder="Value in seconds">
                     </div>
                     </div>
                     <div class="value2">
                     <div>
-                        <input type="button" value="Angle" class="inputbtn1">
-                        <input type="text" class="value1" id="theta" placeholder="Enter value in seconds">
+                        <input type="button" value="N" class="inputbtn1">
+                        <input type="text" class="value1" id="n" placeholder="Value in seconds">
                     </div>
+                    
+                    <div>
+                        <input type="button" value="Angle" class="inputbtn1">
+                        <input type="text" class="value1" id="theta" placeholder="Value in seconds">
+                    </div>
+                    </div>
+                    <div class="value2">
                     <div>
                         <input type="button" value="Em" class="inputbtn1">
-                        <input type="text" class="value1" id="em" placeholder="Enter value in seconds">
+                        <input type="text" class="value1" id="em" placeholder="Value in seconds">
                     </div>
                     <div>
                         <input type="button" value="Im" class="inputbtn1">
-                        <input type="text" class="value1" id="im" placeholder="Enter value in seconds">
+                        <input type="text" class="value1" id="im" placeholder="Value in seconds">
                     </div>
                     </div>
                   </form>  
@@ -306,6 +297,24 @@
             document.getElementById("display6").value = i;
         }
         </script>
+    <div class="tabPanel" id="tabpanel4">Tab 4:Content</div>
+</div>
+<script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+<script src="../js/Virtual-Physics-Lab-Revised.js"></script>
+<script src="../js/experiment-tabs.js"></script>
+<script src="../js/scrolltotop.js"></script>
+</body>
+</html>
+
+            <!-- <ul>
+                <li><a href="virtual-lab-paralax.html">Home</a></li>
+                <li><a href="optical-fibre-tabs.html">Fibre Optics</a></li>
+                <li><a href="Malus-law-tabs.html">Polarization-Malus Law</a></li>
+                <li><a href="ultrasonic-testing-tabs.html">Ultrasonic Inferometer</a></li>
+                <li><a href="laser-tabs.html">Laser</a></li>
+                <li><a href="projectile-motion-tabs.html">Projectile Motion</a></li>
+            </ul> -->
         <!-- <table cellspacing="4" cellpadding="3" border="1">
     <div class="tabPanel">
         <table cellspacing="4" cellpadding="3" border="1">
@@ -389,14 +398,9 @@
     </div>
 =======
         </table>
-    </div> -->
-
-    <div class="tabPanel">Tab 4:Content</div>
-</div>
-<script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
-<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
-<script src="Virtual-Physics-Lab-Revised.js"></script>
-<script src="laser-tabs.js"></script>
-<script src="scrolltotop.js"></script>
-</body>
-</html>
+    </div> 
+//         function Delta()
+// {
+//         delta = n*(a+b)*Math.sin(ang);
+//         document.getElementById("delta").value = delta;
+//}-->

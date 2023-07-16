@@ -3,10 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <title>Projectile Motion</title>
-    <link rel="stylesheet" type="text/css" href="experiment-tabs.css">
-    <link rel="stylesheet" href="circular-nav-menu.css">
-    <link rel="stylesheet" href="virtual-lab-sidebar.css">
-    <link rel="stylesheet" href="experiemts.css">
+    <link rel="stylesheet" type="text/css" href="../css/experiment-tabs.css">
+    <link rel="stylesheet" href="../css/circular-nav-menu.css">
+    <link rel="stylesheet" href="../css/virtual-lab-sidebar.css">
+    <link rel="stylesheet" href="../css/experiemts.css">
+    <link rel="stylesheet" href="../css/custom-scroll-bar.css">
     <link rel="stylesheet" href="../css/projectilecalci.css">
     <nav class="navbar">
         <div class="navdiv">
@@ -108,7 +109,7 @@
         <button onclick="showPanel(2)">Calculator</button>
         <button onclick="showPanel(3)">Animation</button>
     </div>
-    <div class="tabPanel">
+    <div class="tabPanel" id="tabpanel1">
         <h2>Projectlie Motion</h2>
         <h3>Index</h3>
         <p>
@@ -118,12 +119,12 @@
             The object is called a projectile, and its path is called its trajectory.
         </p>
     </div>
-    <div class="tabPanel">
+    <div class="tabPanel" id="tabpanel2">
         <p>
             <img src="https://cdn1.byjus.com/wp-content/uploads/2020/07/Projectile-Motion-1.png" width="300" height="200">
          </p>
     </div>
-    <div class="tabPanel">
+    <div class="tabPanel"id="tabpanel3">
         <div class="container">
             <div class="calculator">
                 <form>
@@ -223,6 +224,16 @@
                 }
              } 
             </script>
+    </div>
+    <div class="tabPanel" id="tabpanel3"><img src="../images/gifs/Presentation1.gif" alt="" srcset=""></div>
+</div>
+<script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+<script src="../js/Virtual-Physics-Lab-Revised.js"></script>
+<script src="../js/experiment-tabs.js"></script>
+<script src="../js/scrolltotop.js"></script>
+</body>
+</html>
         <!-- <table cellspacing="4" cellpadding="3" border="1">
             <tr>
                 <td>Enter value of Initial velocity </td> 
@@ -262,13 +273,3 @@
                 </td>
             </tr>
         </table> -->
-    </div>
-    <div class="tabPanel"><img src="../images/gifs/Presentation1.gif" alt="" srcset=""></div>
-</div>
-<script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
-<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
-<script src="projectile-motion-tabs.js"></script>
-<script src="scrolltotop.js"></script>
-<script src="Virtual-Physics-Lab-Revised.js"></script>
-</body>
-</html>

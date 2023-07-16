@@ -1,0 +1,50 @@
+*{
+    box-sizing: border-box;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+  body{
+    background-color: var(--primary);
+    padding: 0.2rem;
+  }
+.title{
+    background: linear-gradient(to right,var(--grad1),var(--grad2));
+    text-align: center;
+    padding: 1.5rem;
+}
+a{
+    color: var(--primary);
+}
+a:hover{
+    color:var(--accent1);
+}
+a:visited{
+    color: var(--primary);
+}
+
+#tabpanel1{
+    background-color: var(--primary);
+    color: var(--secondary);
+    text-align: left;
+}
+#tabpanel2{
+    background-color: var(--accent2);
+    padding: 5rem;
+    background-image: url(../images/experiments/laser-interference2.jpg);
+    image-rendering: optimizeQuality;
+    background-size:cover;
+    background-repeat: no-repeat;
+}
+#tabpanel3{
+    background-color: var(--accent3);
+}
+#tabpanel4{
+    background-color: var(--accent4);
+}
+a:active{
+    color: var(--accent1);
+}
+
+.Theory{
+    margin: 0.7rem;   
+}

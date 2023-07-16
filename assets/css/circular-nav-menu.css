@@ -1,3 +1,25 @@
+:root{
+  --primary: #FFF;
+  /* --primary: #a5eae3; */
+  --secondary: #333;
+  --accent1: #FF3366;
+  --accent2: #0690DB;
+  --accent3: #2EC4B6;
+  --accent4: #892CDC;
+  --grad1:#D8B5FF;
+  --grad2:#1EAE98;
+
+}
+.dark-mode{
+  --primary:  #333;
+  --secondary: #FFF;
+  --accent1: #33FFCC;
+  --accent2: #DE621E;
+  --accent3: #8A8E91;
+  --accent4: #AAA;
+  --grad1:#662D8C;
+  --grad2:#ED1E79;
+}
 .nav-menu-body{
     top: 5px;
     position: sticky;
@@ -70,11 +92,15 @@
 .experiment-menu a{
   font-family: Arial, sans-serif;
   font-size: 1em;
-  color:#fffec0;
+  color: var(--primary);
   text-decoration: none;
+}
+.experiment-menu a:hover{
+  color: var(--accent1);
 }
 .experiment-menu a:visited{
   text-decoration: none;
+  color: var(--primary);
 }
 .hover-menu {
   position: relative;

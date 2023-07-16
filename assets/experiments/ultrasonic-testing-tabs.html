@@ -3,23 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <title>Tabs</title>
-    <link rel="stylesheet" type="text/css" href="experiment-tabs.css">
-    <link rel="stylesheet" href="circular-nav-menu.css">
-    <!-- <link rel="stylesheet" href="Ultrasonic-experiment.css"> -->
-    <link rel="stylesheet" href="virtual-lab-sidebar.css">
-    <link rel="stylesheet" href="experiemts.css"> 
+    <link rel="stylesheet" type="text/css" href="../css/experiment-tabs.css">
+    <link rel="stylesheet" href="../css/circular-nav-menu.css">
+    <link rel="stylesheet" href="../css/virtual-lab-sidebar.css">
+    <link rel="stylesheet" href="../css/experiemts.css">
+    <link rel="stylesheet" href="../css/custom-scroll-bar.css">
     <link rel="stylesheet" href="../css/ultrasoniccalci.css">
     <nav class="navbar">
         <div class="navdiv">
             <div class="logo"><a href="../../index.html">Virtual Physics Lab</a></div>
-            <ul>
-                <li><a href="virtual-lab-paralax.html">Home</a></li>
-                <li><a href="optical-fibre-tabs.html">Fibre Optics</a></li>
-                <li><a href="Malus-law-tabs.html">Polarization-Malus Law</a></li>
-                <li><a href="ultrasonic-testing-tabs.html">Ultrasonic Inferometer</a></li>
-                <li><a href="laser-tabs.html">Laser</a></li>
-                <li><a href="projectile-motion-tabs.html">Projectile Motion</a></li>
-            </ul>
+
         </div>
     </nav>
     <script>
@@ -92,10 +85,9 @@
         <button onclick="showPanel(2)">Calculator</button>
         <button onclick="showPanel(3)">Animation</button>
     </div>
-    <div class="tabPanel">
+    <div class="tabPanel"id="tabpanel1">
     <h2>Ultrasonic Testing</h2>
     <h3 id="Theory">Theory</h3>
-    <div class="flex-container"></div>
     <div class="para1">
         Method of characterizing the thickness or internal structure of a test piece through the use of high frequency sound waves.
         The frequencies, or pitch, used for ultrasonic testing are many times higher than the limit of human hearing, 
@@ -105,7 +97,7 @@
         biomedical field for diagnostic imaging and medical research.
     </div>
     </div>
-    <div class="tabPanel">
+    <div class="tabPanel" id="tabpanel2">
         <div class="flex-container">
             <div class="img2"></div>
             <div class="formula">
@@ -120,7 +112,7 @@
         </div>     
         
     </div>
-    <div class="tabPanel">
+    <div class="tabPanel"id="tabpanel3">
         <div class="container">
             <div class="calculator">
                 <form>
@@ -220,7 +212,20 @@
             }
         } 
         </script>
-        <!-- <table>
+        
+    </div>
+    <div class="tabPanel"id="tabpanel4">
+        <img src="../images/gifs/Presentation3.gif">
+    </div>
+</div>
+<script src="../js/Virtual-Physics-Lab-Revised.js"></script>
+<script src="../js/experiment-tabs.js"></script>
+<script src="../js/scrolltotop.js"></script>
+<script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+</body>
+</html>
+<!-- <table>
             <tr>
                 <td>
                     <table cellspacing="4" cellpadding="3" border="1">
@@ -265,17 +270,3 @@
                 </td>
             </tr>
         </table> -->
-        
-    </div>
-    <div class="tabPanel">
-        <img src="https://im2.ezgif.com/tmp/ezgif-2-607e1e9358.webp">
-        <img src="../images/gifs/Presentation3.gif">
-    </div>
-</div>
-<script src="Virtual-Physics-Lab-Revised.js"></script>
-<script src="ultrasonic-testing-tabs.js"></script>
-<script src="scrolltotop.js"></script>
-<script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
-<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
-</body>
-</html>
