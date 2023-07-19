@@ -37,7 +37,7 @@ body{
   --primary:  #333;
   --secondary: #FFF;
   --accent1: #33FFCC;
-  --accent2: #DE621E;
+  --accent2: #FF5656;
   --accent3: #8A8E91;
   --accent4: #AAA;
   --grad1:#662D8C;
@@ -171,7 +171,7 @@ a{
   text-decoration: none;
 }
 a:hover{
-  color: var(--accent1);
+  color: var(--accent2);
 }
 /* .card-title {
   font-size: 40px;
