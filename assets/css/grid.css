@@ -21,6 +21,21 @@
     max-width: 80%;
 }
 @media screen and (min-width:425px){
+    :root{
+        --spin:200px;
+    }
+    .nav-menu li{
+        transform: translateY(-2vw) translateX(3vw);
+        padding: 10%;
+    }
+    .nav-menu.menu-active li{
+        font-size: 3em;
+    }
+    .menu-toggle{
+        font-size: 10em;
+        width: 22vw;
+        height: 22vw;
+    }
     .experiments{
         grid-template-areas:
         "exp1"
@@ -32,6 +47,22 @@
     }
 }
 @media screen and (min-width:1024px){
+    :root{
+        --spin:60px;
+    }
+    .nav-menu li{
+        transform: translateX(-2vw);
+        padding: 22px;
+    }
+    .nav-menu.menu-active li{
+        font-size: 1.5em;
+    }
+    .menu-toggle{
+        font-size: 3em;
+        width: 22vw;
+        height: 22vw;
+    }
+    
     .experiments{
         grid-template-areas: 
         "exp1 exp2 exp3"

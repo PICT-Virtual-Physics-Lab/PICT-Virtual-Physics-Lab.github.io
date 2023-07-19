@@ -8,6 +8,7 @@
   --accent4: #892CDC;
   --grad1:#D8B5FF;
   --grad2:#1EAE98;
+  --spin: 60px;
 
 }
 .dark-mode{
@@ -36,10 +37,10 @@
 }
 
 .nav-menu li{
-  padding: 22px;
+  /* padding: 22px; */
   list-style: none;
   position: absolute;
-  transform-origin: 11.82vw;
+  /* transform-origin: 11.82vw; */
   transition: 1s;
   transition-delay:calc(0.15s*3.14/4 * var(--i));
   border-radius: 12px;
@@ -48,7 +49,6 @@
   align-items: center;
 }
 .menutoggle{
-  position:absolute;
   width: 5.5vw;
   height: 5.5vw;
   background-color: aliceblue; 
@@ -66,10 +66,10 @@
   transform: rotate(270deg);
 }
 .nav-menu.menu-active li{
-  transform: translateX(calc(-60px*3.14/4 * var(--i)));
+  transform: translateX(calc(var(--spin)*(-3.14/4) * var(--i)));
   align-items: center;
-  top: 5px;
-  right:20px;
+  top: 0.32rem;
+  right: 1em;
   background: var(--secondary);
   font-size: 1.5em;
 }
@@ -86,8 +86,8 @@
   background-color:var(--accent1);
   border-radius: 10px;
   z-index: 1;
-  top: 10px;
-  padding: 10px;
+  top: 0.6em;
+  padding: 0.6rem;
 }
 .experiment-menu a{
   font-family: Arial, sans-serif;
