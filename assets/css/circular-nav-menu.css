@@ -40,7 +40,7 @@
   /* padding: 22px; */
   list-style: none;
   position: absolute;
-  /* transform-origin: 11.82vw; */
+  transform-origin: 11.82vw;
   transition: 1s;
   transition-delay:calc(0.15s*3.14/4 * var(--i));
   border-radius: 12px;
@@ -114,4 +114,6 @@
   min-height: 1vw;
   padding-bottom: 0.5vw;
 }
-
+.nav-menu.menu-active li #i3{
+  transform: translateX(100px);
+}
