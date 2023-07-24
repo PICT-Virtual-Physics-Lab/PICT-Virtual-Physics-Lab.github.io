@@ -3,46 +3,45 @@
 <head>
     <meta charset="UTF-8">
     <title>References</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            line-height: 1.6;
-            max-width: 800px;
-            margin: 0 auto;
-            padding: 20px;
-        }
-
-        h1 {
-            text-align: center;
-        }
-
-        ul {
-            list-style-type: none;
-            padding: 0;
-        }
-
-        li {
-            margin-bottom: 10px;
-        }
-
-        a {
-            color: #007bff;
-            text-decoration: none;
-        }
-
-        a:hover {
-            text-decoration: underline;
-        }
-    </style>
+    <link rel="shortcut icon" href="/assets/images/favicon.svg" type="image/x-icon">
+    <link rel="stylesheet" href="../css/circular-nav-menu.css">
+    <!-- <link rel="stylesheet" href="../css/virtual-lab-sidebar.css"> -->
+    <link rel="stylesheet" href="../css/experiemts.css">
+    <link rel="stylesheet" href="../css/custom-scroll-bar.css">
+    <link rel="stylesheet" href="../css/References.css">
 </head>
 <body>
-    <h1>References</h1>
+    <header>
+        <h1>References</h1>
+        <div class="back">
+            <li><a href="../../index.html#Home" title="Home"><ion-icon name="home"></ion-icon></a></li>
+            <li><div class="hover-menu">
+                <a href="../../index.html#Experiments" title="Experiments"><ion-icon name="logo-apple-ar"></ion-icon></a>
+                <div class="experiment-menu">
+                    <a href="optical-fibre-tabs.html">Experiment 1</a>
+                    <br>
+                    <a href="Malus-law-tabs.html">Experiment 2</a>
+                    <br>
+                    <a href="ultrasonic-testing-tabs.html">Experiment 3</a>
+                    <br>
+                    <a href="laser-tabs.html">Experiment 4</a>
+                    <br>
+                    <a href="projectile-motion-tabs.html">Experiment 5</a>
+                </div>
+            </div></li>
+            <a title="Dark Mode" class="dark-mode-toggle"><ion-icon name="contrast"></ion-icon></a>
+            <li><button onclick="history.back()">&laquo;Back</button></li>
+        </div>
+    </header>
     <ul>
-        <li><a href="http://www.fiber-optics.info/" target="_blank">Optic Fiber Transmission and Total Internal Reflection</a></li>
-        <li><a href="http://hyperphysics.phy-astr.gsu.edu/hbase/phyopt/polcon.html" target="_blank">Polarisation</a></li>
-        <li><a href="https://www.olympus-ims.com/en/ndt-tutorials/" target="_blank">Non Destructive Testing by Ultrasound</a></li>
-        <li><a href="https://www.physicsclassroom.com/class/light/Lesson-3/Interference-of-Waves" target="_blank">Multiple Slit Laser Interference</a></li>
-        <li><a href="https://www.khanacademy.org/science/physics/two-dimensional-motion/two-dimensional-projectile-mot/v/projectile-motion" target="_blank">Projectile Motion</a></li>
+        <li><a href="https://en.wikipedia.org/wiki/Optical_fiber" target="_blank">Optic Fiber Transmission and Total Internal Reflection</a></li>
+        <li><a href="https://www.britannica.com/science/polarization-physics" target="_blank">Polarisation</a></li>
+        <li><a href="https://www.wermac.org/others/ndt_ut.html" target="_blank">Non Destructive Testing by Ultrasound</a></li>
+        <li><a href="https://phys.libretexts.org/Bookshelves/University_Physics/Book%3A_University_Physics_(OpenStax)/University_Physics_III_-_Optics_and_Modern_Physics_(OpenStax)/03%3A_Interference/3.04%3A_Multiple-Slit_Interference" target="_blank">Multiple Slit Laser Interference</a></li>
+        <li><a href="https://phet.colorado.edu/sims/html/projectile-motion/latest/projectile-motion_en.html" target="_blank">Projectile Motion</a></li>
     </ul>
+    <script src="../js/Virtual-Physics-Lab-Revised.js"></script>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
 </body>
 </html>

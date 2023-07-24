@@ -72,6 +72,7 @@
   right: 1em;
   background: var(--secondary);
   font-size: 1.5em;
+  padding: 22px;
 }
 .nav-menu li a{
   display: flex;
