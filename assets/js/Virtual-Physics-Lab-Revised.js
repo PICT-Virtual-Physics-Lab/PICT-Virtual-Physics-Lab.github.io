@@ -1,7 +1,33 @@
 let menu = document.querySelector('.nav-menu')
 let menutoggle = document.querySelector('.menutoggle')
+let menustate = localStorage.getItem("menustate")
+const menuopen = () => {
+  localStorage.setItem("menustate","open")
+  menu.classList.toggle('menu-active')
+}
+const menuclose = () => {
+  localStorage.setItem("menustate","closed")
+  // menu.classList.toggle('menu-active')
+}
+if (menustate === "open"){
+  menuopen();
+}
+else{
+  menuclose();
+}
 menutoggle.onclick = function(){
+  menustate = localStorage.getItem("menustate")
+  if(menustate !== "open")
+  {
+    menuopen();
+    console.log(localStorage.getItem("menustate"))
+  }
+  else
+  {
+    menuclose();
     menu.classList.toggle('menu-active')
+    console.log(localStorage.getItem("menustate"))
+  }
 }
 
 
@@ -27,11 +53,11 @@ modeToggle.addEventListener("click", () => {
   if(darkmode !== "true")
   {
     dark_mode();
-    console.log(darkmode)
+    console.log(localStorage.getItem("darkmode"))
   }
   else
   {
     light_mode();
-    console.log(darkmode)
+    console.log(localStorage.getItem("darkmode"))
   }
 });
