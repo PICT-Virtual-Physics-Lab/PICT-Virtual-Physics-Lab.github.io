@@ -29,7 +29,27 @@ menutoggle.onclick = function(){
     console.log(localStorage.getItem("menustate"))
   }
 }
+function onDrag({movementY}){
+  const menuStyle = window.getComputedStyle(menu);
+  menuTop = parseInt(menuStyle.top),
+  menuHeight = parseInt(menuStyle.height),
+  windowHeight = window.innerHeight;
+ console.log(movementY)
+menu.style.top = menuTop > 0 ? `${menuTop + movementY}px` : "1px";
+if((menuTop > windowHeight - menuHeight)){
+  menu.style.top = `${windowHeight - menuHeight}px`;
+}
+}
 
+menu.addEventListener("mousedown", ()=>{
+  menu.addEventListener("mousemove" , onDrag);
+});
+menu.addEventListener("mouseup", ()=>{
+  menu.removeEventListener("mousemove" , onDrag);
+});
+menu.addEventListener("mouseleave", ()=>{
+  menu.removeEventListener("mousemove" , onDrag);
+});
 
 let darkmode = localStorage.getItem("darkmode")
 const modeToggle = document.querySelector(".dark-mode-toggle")
