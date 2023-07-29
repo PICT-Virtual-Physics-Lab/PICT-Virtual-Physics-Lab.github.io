@@ -31,7 +31,8 @@ body{
   --accent4: #892CDC;
   --grad1:#D8B5FF;
   --grad2:#1EAE98;
-
+  --inv: 100%;
+  --footer: #000;
 }
 .dark-mode{
   --primary:  #333;
@@ -42,6 +43,8 @@ body{
   --accent4: #AAA;
   --grad1:#662D8C;
   --grad2:#ED1E79;
+  --inv: 0%;
+  --footer: #fff;
 }
 .primarybg{
   background-color: var(--primary);
@@ -88,8 +91,10 @@ header{
   align-items: center;
   margin: 0;
   top: 0;
-  position: relative;
+  position: sticky;
   margin-bottom: 5px;
+  box-shadow: 5px 0 30px 5px #11111172;
+  z-index: 9999;
   /* background: linear-gradient(to right, --secondary, #FF4B3E); */
 
 }
@@ -113,14 +118,15 @@ header li{
 .imgparallax {
   background-size: cover;
   background-repeat:no-repeat;
-  /* https://www.austincc.edu/sites/default/files/sem-physics.jpg ---maybe use this later */
-  /* background-image: url('https://images.unsplash.com/photo-1635070041078-e363dbe005cb?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=870&q=80'); */
+  filter: invert(var(--inv));
   background-image: url("https://images.unsplash.com/photo-1635070041078-e363dbe005cb?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=870&q=80");
-  /* background-image: url("https://www.youtube.com/watch?v=dQw4w9WgXcQ"); Rick Roll version */
+  /* background-image: url("https://www.youtube.com/watch?v=dQw4w9WgXcQ"); */
+  /*^^^Rick Roll version  */
 }
 .imgparallax1{
   background-size: cover;
   background-repeat: no-repeat;
+  filter: grayscale(100%);
   /* background-image: url('/videos/rube1.mp4'); */
   background-image: url('https://www.austincc.edu/sites/default/files/sem-physics.jpg');
 }
@@ -210,4 +216,15 @@ Kinda Unnecessary stuff here
 
 .grad{
   background: linear-gradient(to right, var(--grad1), var(--grad2));
+}
+footer{
+  display: grid;
+  place-items: center;
+  background-color: var(--footer);
+  color: var(--primary);
+  padding: 4rem;
+  text-align: center;
+}
+footer a{
+  color: var(--primary);
 }

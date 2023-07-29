@@ -22,7 +22,7 @@
   --grad2:#ED1E79;
 }
 .nav-menu-body{
-    top: 5px;
+    top: 10dvh;
     position: sticky;
     align-items: right;
     justify-content: right;
