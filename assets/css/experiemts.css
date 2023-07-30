@@ -30,8 +30,8 @@ a:visited{
 #tabpanel2{
     background-color: var(--accent2);
     padding: 5rem;
-    background-image: url(../images/experiments/laser-interference2.jpg);
-    image-rendering: optimizeQuality;
+    /* background-image: url(../images/experiments/laser-interference2.jpg); */
+    /* image-rendering: optimizeQuality; */
     background-size:cover;
     background-repeat: no-repeat;
 }
@@ -47,4 +47,11 @@ a:active{
 
 .Theory{
     margin: 0.7rem;   
+}
+.flex{
+    display: flex;
+    flex-direction: row;
+    flex-basis: 100%;
+    gap: 2em;
+    overflow: hidden;
 }
