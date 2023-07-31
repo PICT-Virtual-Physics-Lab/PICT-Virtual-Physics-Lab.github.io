@@ -9,7 +9,7 @@
   --grad1:#D8B5FF;
   --grad2:#1EAE98;
   --spin: 60px;
-
+  --inv: 0%;
 }
 .dark-mode{
   --primary:  #333;
@@ -20,6 +20,7 @@
   --accent4: #AAA;
   --grad1:#662D8C;
   --grad2:#ED1E79;
+  --inv:100%;
 }
 .nav-menu-body{
     top: 10dvh;
@@ -32,9 +33,7 @@
 .nav-menu{
   display: flex;
   justify-content: right;
-  align-items: right;
-  right: 0;
-  cursor: grab;
+  align-items: center;
 }
 
 .nav-menu li{

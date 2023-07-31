@@ -86,17 +86,49 @@
     <div class="tabPanel" id="tabpanel1">
         <h3>Theory</h3>
         <div class="flex-container"></div>
-        <div class="para1">
-            When light falls on a polarizer, the transmitted light gets polarized. 
-            The polarized light falling on. another Polaroid, called analyzer, transmits light 
-            depending on the orientation of its axis with the. polarizer. 
-            The intensity of light transmitted through the analyzer is given by Malus' law.
+        <div class="Theory">
+            The light coming from the Sun, candle light, and light emitted by a bulb is an ordinary light and is known to be un-polarized. 
+            <br>In an un-polarized light electric and magnetic field vectors vibrate in all possible directions perpendicular 
+            <br>to each other and also perpendicular to the direction of propagation of light. 
+            <br>
+            <br>The unpolarised light can be considered to be composed of two linear orthogonal polarization states with complete incoherence.  
+            <br>When unpolarized light is incident on an ideal polarizer, the intensity of the transmitted light is one-half of the incident light. 
+            <br>Also if the polarizer is rotated w.r.t. incident light there is no change in the irradiance of the transmitted light 
+            <br>i.e. its intensity remains half of the incident light.  
+            <br><br>
+            <h3>Polarization:</h3>
+            Certain transparent materials such as Nicol, Tourmaline are capable of filtering <br>
+            and allowing light waves having vibrations in only one plane. <br>
+            Such materials are called Polaroids. <br>
+            This filtering is possible due the structure of the material that is having its cells <br>
+            arranged in a straight line manner only in one direction (parallel to the pass axis of polarizer). <br>
+            This phenomenon of filtering and producing light waves having vibrations confined <br>
+            to one particular direction is called polarization. <br>
+            Polarization is a property of a material by which <br>
+            light waves are filtered and made directional. 
+            <br><br>
+            <h3>Malus’s Law:</h3>
+            When light falls on a polarizer, the transmitted light gets polarized. The polarized light falling on another Polaroid, <br>
+            called analyzer, transmits light depending on the orientation of its axis with the polarizer. The intensity of light transmitted <br>
+            through the analyzer is given by <b>Malus’ law.</b> <br>
+            The law describes how the intensity of light transmitted by the analyzer <br>
+            varies with the angle that its plane of transmission makes with that of the polarizer.
+            <br><br>
+            <h3>Statement of Malus Law</h3> <br>
+            <em><b>"The intensity of the transmitted light varies as the square of the cosine <br>
+                of the angle between the two planes of transmission."</b></em>
+                <br><br>
+            <div style="text-align: center; object-fit: contain;">
+                <img src="../images/experiments/Polarisation/Malus-Law-Experiment-3.jpg" alt="" style="max-height: 400px;">
+            </div>
         </div>
     </div>
     <div class="tabPanel" id="tabpanel2">
         <div>
-                <img src="https://cdn1.byjus.com/wp-content/uploads/2020/11/Malus-Law-7.png" width="300" height="200">
-            </div>
+                <img src="../images/experiments/Polarisation/Malus-Law-Experiment-2.jpg" alt="" style="filter: invert(var(--inv));">
+                <br><br><br><br>
+                <img src="../images/experiments/Polarisation/Malus-Law-Experiment-1.jpg" alt="" style="filter: invert(var(--inv));">
+        </div>
     </div>
     <div class="tabPanel" id="tabpanel3">
         <div class="container">
@@ -108,7 +140,7 @@
                     <div class="display">
                         <input type="text" name="display1" id="display1" readonly>
                     </div>
-                    <div>
+                    <div style="text-align: left;">
                         <input type="button" value="AC" onclick="display.value= '' ">
                         <input type="button" value="DE" onclick="display.value = display.value.toString().slice(0,-1)">
                         <input type="button" value="AC1" onclick="display1.value = '' ">
@@ -128,8 +160,8 @@
                         <input type="button" value="8" onclick="display.value += '8' ">
                         <input type="button" value="9" onclick="display.value += '9' ">
                         <input type="button" value="*" onclick="display.value += '*' ">
-                        <input type="button" id="I1" value="Intensity after
-         polarizer" onclick="answer1()" class="outputbtn">
+                        <input type="button" id="I1" value="Intensity after 
+polarizer" onclick="answer1()" class="outputbtn">
                     </div>
                     <div>
                         <input type="button" value="4" onclick="display.value += '4' ">
@@ -139,7 +171,7 @@
                         <input type="button" id="I2" value="Intensity after 
         analyzer" onclick="answer2()" class="outputbtn">
                     </div>
-                    <div>
+                    <div style="text-align: left;">
                         <input type="button" value="1" onclick="display.value += '1' ">
                         <input type="button" value="2" onclick="display.value += '2' ">
                         <input type="button" value="3" onclick="display.value += '3' ">
@@ -152,11 +184,11 @@
                         <input type="button" value="/" onclick="display.value += '/' ">
                         <input type="button" value="=" onclick="display.value = eval(display.value)" class="equalbtn">
                     </div>
-                    <div>
+                    <div style="text-align: left;">
                         <input type="button" value="UPL">
-                        <input type="text" class="value" id="upl" placeholder="Enter intensity of unpolarizer light">
+                        <input type="text" class="value" id="upl" placeholder="Enter intensity of unpolarized light">
                     </div>
-                    <div>
+                    <div style="text-align: left;">
                         <input type="button" value="Angle">
                         <input type="text" class="value" id="theta" placeholder="between polarizer & analyzer in radians">
                     </div>
@@ -183,6 +215,7 @@
     </div>
     <div class="tabPanel" style="background-color: #fff;">
         <style>
+            
             .polar-simul{
                 align-content: center;
                 justify-content: center;
@@ -211,7 +244,7 @@
             padding: 0;
             font-family: Arial, sans-serif;
             display: flex;
-            padding: 40px;
+            padding: 1em 1em 0 1em;
             align-items: center;
             align-self: center;
             min-height: 70vh;
@@ -221,7 +254,7 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            padding: 20px;
+            padding: 1em 1em 0.7em 1em;
             background:linear-gradient(to bottom,rgba(0,0,0,0.05),#edf1f4 );
             border-radius: 40px;
             box-shadow: 15px 15px 20px rgba(0,0,0,0.1),
@@ -287,26 +320,97 @@
                 max-width: 200px;
                 aspect-ratio: 1;
             }
+            /* Pop-up stuff */
+            .popup {
+            position: relative;
+            display: inline-block;
+            cursor: pointer;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+            }
+
+            /* The actual popup */
+            .popup .popuptext {
+            visibility: hidden;
+            width: 50vw;
+            background-color: #5555558f;
+            color: #fff;
+            text-align: left;
+            border-radius: 6px;
+            padding: 5px;
+            position: absolute;
+            z-index: 1;
+            bottom: 125%;
+            left: 50%;
+            margin-left: -15vw;
+            }
+
+            /* Popup arrow */
+            .popup .popuptext::after {
+            content: "";
+            position: absolute;
+            top: 100%;
+            left: 40%;
+            margin-left: -5px;
+            border-width: 5px;
+            border-style: solid;
+            border-color: #555 transparent transparent transparent;
+            }
+
+            /* Toggle this class - hide and show the popup */
+            .popup .show {
+            visibility: visible;
+            -webkit-animation: fadeIn 1s;
+            animation: fadeIn 1s;
+            }
+
+            /* Add animation (fade in the popup) */
+            @-webkit-keyframes fadeIn {
+            from {opacity: 0;} 
+            to {opacity: 1;}
+            }
+
+            @keyframes fadeIn {
+            from {opacity: 0;}
+            to {opacity:1 ;}
+            }
           </style>
           <div class="simulator">
             <div class="source">
-                  <img src="https://d10lpgp6xz60nq.cloudfront.net/physics_images/PR_XII_V02_C06_S01_645_S01.png" alt="light source" srcset="" id="upl">
-                  <input id="ipl" value="1" placeholder="Intensity of Unpolarised Light" style="min-height:20px;">
+                  <img src="https://d10lpgp6xz60nq.cloudfront.net/physics_images/PR_XII_V02_C06_S01_645_S01.png" alt="light source" srcset="" id="upl" style="box-shadow: none;">
+                  <input id="ipl" value="100" placeholder="Intensity of Unpolarised Light" style="min-height:20px;" readonly>
             </div>
               <div class="analys" id="block" title="Polariser"></div>
               <div class="block" id="block" title="Analyzer"></div>
               <div class="output">
-                  <img class="polarised" src="https://pic.onlinewebfonts.com/svg/img_72199.png" alt="detector" id="pl">
-                  <input id="intensity" placeholder="Intensity of polarised light" readonly>
+                  <img class="polarised" src="https://pic.onlinewebfonts.com/svg/img_72199.png" alt="detector" id="pl" style="box-shadow: none;">
+                  <input id="intensity" title="Detector" placeholder="Intensity of polarised light" readonly style="text-align: center; padding: 100px 5px 0 5px; background: #333; color: red; margin: -10px 0 0 50px; font-family: sans-serif; font-size: 1rem;">
               </div>
-            </div>
+          </div>
           <div class="polar-simul">
             <div class="experiment-slider">
                 <div class="slider">
-                    <input type="range"class="range" id="slider" max="360" min="0" value="180" onmousemove="slidervalue(this.value)">
+                    <input type="range"class="range" id="slider" max="360" min="0" value="90" onmousemove="slidervalue(this.value)">
                     <span id="rangeval">0</span>
                 </div>
             </div> 
+            <h3 style="color: #333; position: absolute; margin: -6em 0 0 1.5em;">Angle Between Polariser and Analyser</h3>
+            </div>
+            <div class="popup" onclick="popUp()" style="position: absolute; color: #333; margin: -15em 1em 0 -25em;">Click here for Instructions for use.
+                <span class="popuptext" id="myPopup">
+                    <li>The Intensity Boxes are Read-Only. 
+                    <li>Don't waste your time trying to type in them.
+                    <li>The Slider is designed such a way that it <br>
+                        makes it difficult to get a specific value.
+                    <li>Thus providing a level of physical difficulty.<br>
+                    <br>
+                    If the slider is not working,
+                    try to click on it or refresh the <br>
+                    page and move the slider.
+                </span>
+              </div>
       </div>
       
       <script>
@@ -323,7 +427,7 @@
           pl.style.transform = `rotate(${value}deg)`;
           pl.style.opacity = intensity;
           const fpl = (uplintsenity/2)*intensity;
-          document.getElementById("intensity").value = intensity;
+          document.getElementById("intensity").value = intensity*100;
         });
         function slidervalue (value){
                 document.getElementById('rangeval').innerHTML = value;
@@ -336,6 +440,13 @@
 <script src="../js/scrolltotop.js"></script>
 <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
 <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+<script>
+    // When the user clicks on div, open the popup
+    function popUp() {
+      var popup = document.getElementById("myPopup");
+      popup.classList.toggle("show");
+    }
+    </script>
 </body>
 </html>
         <!-- <table cellspacing="4" cellpadding="3" border="1">
