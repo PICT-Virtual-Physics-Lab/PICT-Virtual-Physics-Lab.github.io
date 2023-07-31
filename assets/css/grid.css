@@ -21,7 +21,7 @@
     max-width: 80%;
 }
 @media screen and (min-width:425px){
-    :root{
+    /* :root{
         --spin:200px;
     }
     .nav-menu li{
@@ -35,7 +35,7 @@
         font-size: 10em;
         width: 22vw;
         height: 22vw;
-    }
+    } */
     .experiments{
         grid-template-areas:
         "exp1"
@@ -47,7 +47,7 @@
     }
 }
 @media screen and (min-width:1024px){
-    :root{
+    /* :root{
         --spin:60px;
     }
     .nav-menu li{
@@ -62,7 +62,7 @@
         width: 22vw;
         height: 22vw;
     }
-    
+     */
     .experiments{
         grid-template-areas: 
         "exp1 exp2 exp3"
