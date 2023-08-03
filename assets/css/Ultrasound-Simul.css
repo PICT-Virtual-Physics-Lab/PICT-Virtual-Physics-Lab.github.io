@@ -15,6 +15,7 @@
             --graph: url("file:///D:/Coding-practice/PBL/object-found.webp");
         }
         .simul-body{
+            z-index: 999999999;
             text-align: center;
             justify-content: center;
             /* margin: 10vh 0 0 0 ; */
