@@ -1,0 +1,138 @@
+        *{
+            box-sizing: border-box;
+            padding: 0;
+            margin: 0;
+        }
+        :root{
+            --d1top:10vw;
+            --d1left:0vw;
+            --d2top:15vw;
+            --d2left:62vw;
+            --obheight:20vw;
+            --obwidth:70vw;
+            --graph0: url("file:///object-not-found.webp");
+            --graph1: url("file:///object-found.webp");
+            --graph: url("file:///D:/Coding-practice/PBL/object-found.webp");
+        }
+        .simul-body{
+            text-align: center;
+            justify-content: center;
+            /* margin: 10vh 0 0 0 ; */
+            align-items: center;
+            overflow-x: hidden;
+            background-image: linear-gradient( 135deg, #FFD3A5 10%, #FD6585 100%);
+            /* background-image: linear-gradient( 135deg, #C2FFD8 10%, #465EFB 100%); */
+            /* background: radial-gradient(circle, rgba(51,51,51,1) 10%, rgba(255,255,255,1) 50%); */
+            /* background: radial-gradient(331.49% 141.42% at -0.00% 0%, rgba(228, 228, 228, 0.90) 0%,
+                                rgba(174, 174, 174, 0.6) 0.01%,   rgba(143, 143, 143, 0.5) 22.40%,
+                                rgba(124, 124, 124, 0.3) 43.67%,  rgba(82, 82, 82, 0.15) 67.95%,
+                                rgba(71, 71, 71, 0.1) 100%); */
+        }
+        .Ultrasound{
+            width: var(--obwidth);
+            appearance: none;
+            background: none;
+        }
+        .Ultrasound::-webkit-slider-thumb{
+            appearance: none;
+            background-color: #fff;
+            width: 1.5vw;
+            height: 3vw;
+            border-radius: 0 0 20px 20px ;
+            border: 3px solid rgb(0, 136, 255);
+            /* box-shadow: -407px 0 0 400px rgb(0, 136, 255); */
+        }
+        .test-object, .defect1, .defect2{
+            margin: auto;
+        }
+        .test-object{
+            /* position: absolute; */
+            height: var(--obheight);
+            width: var(--obwidth);
+            background: linear-gradient(#666, #eee);
+            /* background-color: red; */
+        }
+        .defect1{
+            position: relative;
+            top: var(--d1top);
+            left: var(--d1left);
+            transform: translateY(-20vw) translateX(-30vw);
+            height: 7dvh;
+            width: 10vw;
+            background-color: #000;
+            border-radius: 50% 100% 50% 80%;
+        }
+        .defect2{
+            position: relative;
+            top: var(--d2top);
+            left: var(--d2left);
+            transform: translateX(-31vw) translateY(-23vw);
+            fill: none;
+            stroke: #353535;
+            stroke-width: 2px;
+            margin: none;
+        }
+        .input-grid{
+            position: relative;
+            top: -5vw;
+            margin: -1em 3em 3em 3em;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+        }
+        .input-grid input{
+            padding: 2rem;
+            border-radius: 25px;
+            box-shadow: 0 0 20px -1px #2222225f;
+            min-width: 20vw;
+            border: none;
+            background-color:lightseagreen;
+            color: #fff;
+            margin: auto;
+            justify-self: center;
+        }
+        .btn{
+            margin: auto;
+            min-width: 15vw;
+            justify-self: center;
+            position: relative;
+            top: -17.5vw;
+            border: none;
+            border-radius: 100vw;
+            box-shadow: 0 0 20px -1px #2222222e;
+            cursor: pointer;
+
+            
+        }
+        .popup {
+            position: fixed;
+            z-index: 1;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgba(0, 0, 0, 0.4);
+            display: none;
+        }
+        .popup-content {
+            background-color: white;
+            margin: 10% auto;
+            padding: 20px;
+            border: 1px solid #888888;
+            width: 50%;
+            font-weight: bolder;
+        }
+        .popup-content button {
+            display: block;
+            margin: 0 auto;
+        }
+        .popup-content p{
+            background-image: var(--graph);
+            /* background-size: cover; */
+        }
+        .show {
+            display: block;
+        }
+        h1 {
+            color: green;
+        }

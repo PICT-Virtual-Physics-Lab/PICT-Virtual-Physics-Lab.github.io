@@ -10,7 +10,7 @@
       gtag('config', 'G-C017MHPMTF');
     </script>
     <meta charset="UTF-8">
-    <title>Tabs</title>
+    <title>Ultrasonic Inferometer</title>
     <link rel="shortcut icon" href="/assets/images/favicon.svg" type="image/x-icon">
     <link rel="stylesheet" type="text/css" href="../css/experiment-tabs.css">
     <link rel="stylesheet" href="../css/circular-nav-menu.css">
@@ -18,6 +18,7 @@
     <link rel="stylesheet" href="../css/experiemts.css">
     <link rel="stylesheet" href="../css/custom-scroll-bar.css">
     <link rel="stylesheet" href="../css/ultrasoniccalci.css">
+    <link rel="stylesheet" href="../css/Ultrasound-Simul.css">
     <nav class="navbar">
         <div class="navdiv">
             <div class="logo"><a href="../../index.html">Virtual Physics Lab</a></div>
@@ -224,11 +225,54 @@
     </div>
     <div class="tabPanel"id="tabpanel4">
         <img src="../images/gifs/Presentation3.gif">
+        <div class="simul-body">
+            <h2>Ultrasound Simulation</h2>
+            <br>
+            <br>
+            <input class="Ultrasound" type="range" id="detector" onmousemove="changePos()" min="0" max="70"></input>
+            <div class="test-object"></div>
+            <div class="defect1"></div>
+            <div class="defect2">
+                <svg height="80px" width="100px">
+                    <polyline points="0,0 5,10 10,15 15,10 20,15 25,10 30,15 50,20 60,30 70,20 80,10 90,60 100,0" />
+                </svg>
+            </div>
+            <div class="input-grid">
+                <input class="Ultrasound-input" type="text" value="20" placeholder="Height of the test-object" id="obheight">
+                <input class="Ultrasound-input" type="text" value="70" placeholder="Width of the test-object" id="obwidth">
+            </div>
+            <div class="input-grid">
+                <input class="Ultrasound-input" type="text" value="10" placeholder="Height of Defect from the top" id="d1top">
+                <input class="Ultrasound-input" type="text" value="0" placeholder="Distance of Defect from the left edge" id="d1left">
+            </div>
+            <div class="input-grid">
+                <input class="Ultrasound-input" type="text" value="15" placeholder="Height of Crack from the top" id="d2top">
+                <input class="Ultrasound-input" type="text" value="62" placeholder="Distance of Crack from the Left" id="d2left">
+            </div>
+            <div class="input-grid" style="display: flex; flex-direction: column;">
+                <button class="btn" onclick="changePos()" title="Submit" height="50px" width="50px" style="padding: 10px; margin-bottom: 1em;" id="myButton">Submit</button>
+                <button class="btn" onClick="history.go(0);" height="50px" width="50px" style="padding: 10px; margin-bottom: 1em;">Refresh Page</button>
+            </div>
+    
+    
+        <div id="myPopup" class="popup">
+            <div class="popup-content">
+                <h1 style="color:green;">
+                      Graph on CRO
+                  </h1>
+                <p></p>
+                <!-- <img src="https://j.gifs.com/Kr7wGx.gif" alt="CRO Graph"> -->
+                <button id="closePopup" class="btn" style="top: 0; background-color: lightgreen;">
+                      Close
+                  </button>
+            </div>
+        </div>
     </div>
 </div>
 <script src="../js/Virtual-Physics-Lab-Revised.js"></script>
 <script src="../js/experiment-tabs.js"></script>
 <script src="../js/scrolltotop.js"></script>
+<script src="../js/Ultrasound-Simul.js"></script>
 <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
 <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
 </body>
