@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
         *{
             box-sizing: border-box;
             padding: 0;
@@ -10,12 +11,11 @@
             --d2left:62vw;
             --obheight:20vw;
             --obwidth:70vw;
-            --graph0: url("file:///object-not-found.webp");
-            --graph1: url("file:///object-found.webp");
-            --graph: url("file:///D:/Coding-practice/PBL/object-found.webp");
+            --graph0: none;
+            --graph1: block;
+            --graph:none;
         }
         .simul-body{
-            z-index: 999999999;
             text-align: center;
             justify-content: center;
             /* margin: 10vh 0 0 0 ; */
@@ -87,16 +87,20 @@
             min-width: 20vw;
             border: none;
             background-color:lightseagreen;
-            color: #fff;
+            color: var(--primary);
             margin: auto;
-            justify-self: center;
+        }
+        .input-grid p{
+            font-family: 'Anton', sans-serif;
+            font-weight: 800;
+            font-size: clamp(1vw,1.3vw,2vw);
+            /* font-size: clamp(1rem, -0.875rem + 8.333vw, 3.5rem); */
         }
         .btn{
             margin: auto;
             min-width: 15vw;
             justify-self: center;
             position: relative;
-            top: -17.5vw;
             border: none;
             border-radius: 100vw;
             box-shadow: 0 0 20px -1px #2222222e;
@@ -123,6 +127,12 @@
             width: 50%;
             font-weight: bolder;
         }
+        .popup-content #graph1{
+            display: var(--graph);
+        }
+        .popup-content #graph0{
+            display: var(--graph2);
+        }
         .popup-content button {
             display: block;
             margin: 0 auto;
@@ -137,3 +147,30 @@
         h1 {
             color: green;
         }
+
+@media screen and (min-width: 425px) {
+    .input-grid{
+        grid-template-columns: 1fr;
+    }
+    /* .defect1{
+        transform: translateY(-30vw) translateX(-30vw);
+    }
+    .defect2{
+        transform: translateY(-20vw) translateX(-30vw);
+    }
+     */
+}
+@media screen and (min-width: 1024px){
+    .input-grid{
+        grid-template-columns: 1fr 1fr;
+    }
+    .defect1{
+        transform: translateY(-20vw) translateX(-30vw);
+    }
+    .defect2{
+        transform: translateX(-31vw) translateY(-23vw);
+    }
+    .btn{
+        top: -17.5vw;
+    }
+}

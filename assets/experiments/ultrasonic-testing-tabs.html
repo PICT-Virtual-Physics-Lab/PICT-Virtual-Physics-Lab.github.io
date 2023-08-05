@@ -238,16 +238,34 @@
                 </svg>
             </div>
             <div class="input-grid">
-                <input class="Ultrasound-input" type="text" value="20" placeholder="Height of the test-object" id="obheight">
-                <input class="Ultrasound-input" type="text" value="70" placeholder="Width of the test-object" id="obwidth">
+                <p>
+                    Height Of The Embedded Object. <br>
+                    <input class="Ultrasound-input" type="text" value="20" placeholder="Height of the test-object" id="obheight">
+                </p>
+                <p>
+                    Length Of The Embedded Object. <br>
+                    <input class="Ultrasound-input" type="text" value="70" placeholder="Width of the test-object" id="obwidth">
+                </p>
             </div>
             <div class="input-grid">
-                <input class="Ultrasound-input" type="text" value="10" placeholder="Height of Defect from the top" id="d1top">
-                <input class="Ultrasound-input" type="text" value="0" placeholder="Distance of Defect from the left edge" id="d1left">
+                <p>
+                    Height Of Object From The Top.<br>
+                    <input class="Ultrasound-input" type="text" value="10" placeholder="Height of Defect from the top" id="d1top">
+                </p>
+                <p>
+                    Distance of Object from the Left Edge.<br>
+                    <input class="Ultrasound-input" type="text" value="0" placeholder="Distance of Defect from the left edge" id="d1left">
+                </p>
             </div>
             <div class="input-grid">
-                <input class="Ultrasound-input" type="text" value="15" placeholder="Height of Crack from the top" id="d2top">
-                <input class="Ultrasound-input" type="text" value="62" placeholder="Distance of Crack from the Left" id="d2left">
+                <p>
+                    Height Of Crack From The Top.<br>
+                    <input class="Ultrasound-input" type="text" value="15" placeholder="Height of Crack from the top" id="d2top">
+                </p>
+                <p>
+                    Distance Of Crack From The Left.<br>
+                    <input class="Ultrasound-input" type="text" value="62" placeholder="Distance of Crack from the Left" id="d2left">
+                </p>
             </div>
             <div class="input-grid" style="display: flex; flex-direction: column;">
                 <button class="btn" onclick="changePos()" title="Submit" height="50px" width="50px" style="padding: 10px; margin-bottom: 1em;" id="myButton">Submit</button>
@@ -260,8 +278,10 @@
                 <h1 style="color:green;">
                       Graph on CRO
                   </h1>
-                <p></p>
-                <!-- <img src="https://j.gifs.com/Kr7wGx.gif" alt="CRO Graph"> -->
+                  <p>
+                    <img src="../images/experiments/Ultrasound/object-found.webp" alt="CRO Graph" id="graph1">
+                    <img src="../images/experiments/Ultrasound/object-not-found.webp" alt="CRO Graph" id="graph0">
+                  </p>
                 <button id="closePopup" class="btn" style="top: 0; background-color: lightgreen;">
                       Close
                   </button>

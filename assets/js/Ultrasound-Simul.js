@@ -32,11 +32,13 @@ if((detector > parseInt(d2left) && detector < (parseInt(d2left)+8)) ||
 ((detector > parseInt(d1left) && detector < (parseInt(d1left) + 10)))){
  // object found
     document.documentElement.style.setProperty("--graph","--graph1");
+    document.documentElement.style.setProperty("--graph2","--graph0");
     alert("Object Found!!")
 }
 else{
  //object not found
     document.documentElement.style.setProperty("--graph","--graph0");
+    document.documentElement.style.setProperty("--graph2","--graph1");
 }
     d1top +="vw";
     d2top +="vw";
