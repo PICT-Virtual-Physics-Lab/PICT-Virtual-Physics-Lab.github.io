@@ -217,14 +217,3 @@ Kinda Unnecessary stuff here
 .grad{
   background: linear-gradient(to right, var(--grad1), var(--grad2));
 }
-footer{
-  display: grid;
-  place-items: center;
-  background-color: var(--footer);
-  color: var(--primary);
-  padding: 4rem;
-  text-align: center;
-}
-footer a{
-  color: var(--primary);
-}

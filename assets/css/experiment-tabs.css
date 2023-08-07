@@ -1,6 +1,7 @@
 *{
     box-sizing: border-box;
     margin: 0;
+    padding: 0;
     scroll-behavior: smooth;
 }
 .title{
@@ -11,8 +12,10 @@
 }
 
 .tabContainer .buttonContainer{
-    height: 15%;
-}
+    height: 13dvh;
+    border-radius: 10px;
+    overflow: hidden;
+    }
 .tabContainer .buttonContainer button{
     width: 25%;
     height: 100%;

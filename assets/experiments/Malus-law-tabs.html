@@ -12,6 +12,8 @@
     <meta charset="UTF-8">
     <title>Malu's Law</title>
     <link rel="shortcut icon" href="/assets/images/favicon.svg" type="image/x-icon">
+    <link rel="stylesheet" href="../css/text-formats.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
     <link rel="stylesheet" type="text/css" href="../css/experiment-tabs.css">
     <link rel="stylesheet" href="../css/circular-nav-menu.css">
     <link rel="stylesheet" href="../css/virtual-lab-sidebar.css">
@@ -125,9 +127,9 @@
     </div>
     <div class="tabPanel" id="tabpanel2">
         <div>
-                <img src="../images/experiments/Polarisation/Malus-Law-Experiment-2.jpg" alt="" style="filter: invert(var(--inv));">
+                <img src="../images/experiments/Polarisation/Malus-Law-Experiment-2.jpg" alt="Polarisation Apparatus">
                 <br><br><br><br>
-                <img src="../images/experiments/Polarisation/Malus-Law-Experiment-1.jpg" alt="" style="filter: invert(var(--inv));">
+                <img src="../images/experiments/Polarisation/Malus-Law-Experiment-1.jpg" alt="Effect of Intensity of light due Polarisation">
         </div>
     </div>
     <div class="tabPanel" id="tabpanel3">
@@ -185,8 +187,8 @@ polarizer" onclick="answer1()" class="outputbtn">
                         <input type="button" value="=" onclick="display.value = eval(display.value)" class="equalbtn">
                     </div>
                     <div style="text-align: left;">
-                        <input type="button" value="UPL">
-                        <input type="text" class="value" id="upl" placeholder="Enter intensity of unpolarized light">
+                        <input type="button" value="UPL" style="height: 12dvh; width: 5vw;">
+                        <input type="text" class="value" id="upl" placeholder="Enter intensity of unpolarized light" style="max-height: 12dvh; width: 25vw;">
                     </div>
                     <div style="text-align: left;">
                         <input type="button" value="Angle">
@@ -229,6 +231,7 @@ polarizer" onclick="answer1()" class="outputbtn">
               border: solid rgb(97, 97, 97) 2px;
               border-radius: 10px;
               padding: 10px;
+              overflow: hidden;
             }
             #block {
             display: inline-block;
@@ -299,6 +302,7 @@ polarizer" onclick="answer1()" class="outputbtn">
             .block,.analys{
                 /* background-color: rgba(0, 0, 0, 1); */
                 background:radial-gradient(white,lightblue,rgb(101, 203, 240));
+                box-shadow: 0 150px 0 20px black ;
             }
             #upl
             {
@@ -376,6 +380,19 @@ polarizer" onclick="answer1()" class="outputbtn">
             from {opacity: 0;}
             to {opacity:1 ;}
             }
+            .output{
+                display: flex;
+            }
+            .output #intensity{
+                text-align: center; 
+                padding: 100px 5px 0 5px; 
+                background: #333; 
+                color: red; 
+                margin: 5px 0 50px 50px; 
+                font-family: sans-serif; 
+                font-size: 1rem; 
+                font-weight: 900;
+            }
           </style>
           <div class="simulator">
             <div class="source">
@@ -386,7 +403,7 @@ polarizer" onclick="answer1()" class="outputbtn">
               <div class="block" id="block" title="Analyzer"></div>
               <div class="output">
                   <img class="polarised" src="https://pic.onlinewebfonts.com/svg/img_72199.png" alt="detector" id="pl" style="box-shadow: none;">
-                  <input id="intensity" title="Detector" placeholder="Intensity of polarised light" readonly style="text-align: center; padding: 100px 5px 0 5px; background: #333; color: red; margin: -10px 0 0 50px; font-family: sans-serif; font-size: 1rem;">
+                  <input id="intensity" title="Detector" placeholder="Intensity of polarised light" readonly>
               </div>
           </div>
           <div class="polar-simul">
@@ -437,6 +454,22 @@ polarizer" onclick="answer1()" class="outputbtn">
       </script>
     </div>
 </div>
+
+<footer>
+    <p class="big-text-style">
+      <a href="../../index.html" class="logo"><span class="material-symbols-outlined">
+        token
+        </span></a>
+      <div class="small-text-style" style="opacity: 0.5;">
+        <a href="https://github.com/PICT-Virtual-Physics-Lab/PICT-Virtual-Physics-Lab.github.io/blob/main/LICENSE">
+          Copyright © 2023 PICT-Virtual-Physics-Lab <br>
+        </a>
+        Please Read the License Carefully before using the website code for your own projects and other use.
+        <br><br><br>
+        <a href="mailto:sekhaisemarito@gmail.com">For any further queries contact - sekhaisemarito@gmail.com</a> 
+      </div>
+      </p>
+  </footer>
 <script src="../js/Virtual-Physics-Lab-Revised.js"></script>
 <script src="../js/experiment-tabs.js"></script>
 <script src="../js/scrolltotop.js"></script>
