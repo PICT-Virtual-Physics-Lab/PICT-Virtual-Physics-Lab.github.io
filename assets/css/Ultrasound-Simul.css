@@ -13,7 +13,6 @@
             --obwidth:70vw;
             --graph0: none;
             --graph1: block;
-            --graph:none;
         }
         .simul-body{
             text-align: center;
@@ -79,6 +78,7 @@
             margin: -1em 3em 3em 3em;
             display: grid;
             grid-template-columns: 1fr 1fr;
+            color: #222;
         }
         .input-grid input{
             padding: 2rem;

@@ -58,7 +58,7 @@
 <body>
     <div class="nav-menu-body">
         <div class="nav-menu">
-            <div class="menutoggle textblack"><ion-icon name="menu"></ion-icon></div>
+            <div class="menutoggle"><ion-icon name="menu"></ion-icon></div>
                 <li style="--i:4">
                     <a href="../../index.html#Home" title="Home"><ion-icon name="home"></ion-icon></a>
                 </li>
@@ -231,7 +231,7 @@
             <h2>Ultrasound Simulation</h2>
             <br>
             <br>
-            <input class="Ultrasound" type="range" id="detector" onmousemove="changePos()" min="0" max="70"></input>
+            <input class="Ultrasound" type="range" id="detector" onmousemove="objsrc()" min="0" max="70"></input>
             <div class="test-object"></div>
             <div class="defect1"></div>
             <div class="defect2">
@@ -256,7 +256,7 @@
                 </p>
                 <p>
                     Distance of Object from the Left Edge.<br>
-                    <input class="Ultrasound-input" type="text" value="0" placeholder="Distance of Defect from the left edge" id="d1left">
+                    <input class="Ultrasound-input" onmousemove="changePos()" type="range" min="0" value="0" id="d1left" style="box-shadow: none;">
                 </p>
             </div>
             <div class="input-grid">
@@ -266,23 +266,23 @@
                 </p>
                 <p>
                     Distance Of Crack From The Left.<br>
-                    <input class="Ultrasound-input" type="text" value="62" placeholder="Distance of Crack from the Left" id="d2left">
+                    <input class="Ultrasound-input" onmousemove="changePos()" type="range" value="62" min="0" id="d2left" style="box-shadow: none;">
                 </p>
             </div>
             <div class="input-grid" style="display: flex; flex-direction: column;">
-                <button class="btn" onclick="changePos()" title="Submit" height="50px" width="50px" style="padding: 10px; margin-bottom: 1em;" id="myButton">Submit</button>
+                <button class="btn" onclick="objsrc()" title="Submit" height="50px" width="50px" style="padding: 10px; margin-bottom: 1em;" id="myButton">Submit</button>
                 <button class="btn" onClick="history.go(0);" height="50px" width="50px" style="padding: 10px; margin-bottom: 1em;">Refresh Page</button>
             </div>
     
     
         <div id="myPopup" class="popup">
-            <div class="popup-content">
+            <div class="popup-content" style="text-align: center;">
                 <h1 style="color:green;">
                       Graph on CRO
                   </h1>
-                  <p>
-                    <img src="../images/experiments/Ultrasound/object-found.webp" alt="CRO Graph" id="graph1">
-                    <img src="../images/experiments/Ultrasound/object-not-found.webp" alt="CRO Graph" id="graph0">
+                  <p style="text-align: center;">
+                    <img src="../images/experiments/Ultrasound/object-found.webp" alt="CRO Graph" id="graph1" style="display: var(--graph1);">
+                    <img src="../images/experiments/Ultrasound/object-not-found.webp" alt="CRO Graph" id="graph0" style="display: var(--graph0);">
                   </p>
                 <button id="closePopup" class="btn" style="top: 0; background-color: lightgreen;">
                       Close
