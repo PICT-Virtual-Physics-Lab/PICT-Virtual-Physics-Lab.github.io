@@ -76,7 +76,7 @@
 <body>
     <div class="nav-menu-body">
         <div class="nav-menu">
-            <div class="menutoggle textblack"><ion-icon name="menu"></ion-icon></div>
+            <div class="menutoggle"><ion-icon name="menu"></ion-icon></div>
                 <li style="--i:4">
                     <a href="../../index.html#Home" title="Home"><ion-icon name="home"></ion-icon></a>
                 </li>
@@ -134,14 +134,18 @@
             <br>Suppose that the black lines represent the wave peaks and the white lines represent the wave troughs. 
             <br>Within the gap of the slit, the yellow dots represent points at which new circular waves are produced. 
             <br>Note that the new circular waves overlap with one another.
-
-
+            <br><br><br><br>
+            <img src="../images/experiments/laser/Laser-interference-1.jpg" alt="Multiple Slit Interference">
         </div>
     </div>
     <div class="tabPanel" id="tabpanel2">
         <div>
-            <img src="../images/experiments/laser/laser-interference2.jpg">
-            <img src="../images/experiments/laser/laser-fomulae.jpg" alt="" srcset="">
+            
+            <img src="../images/experiments/laser/laser-fomulae.jpg" alt="Laser interference Formula" srcset="">
+            <br><br>
+            <img src="../images/experiments/laser/laser-interference2.jpg" alt="Diffraction Pattern of Human Hair">
+            <br><br>
+            <img src="../images/experiments/laser/Laser-interference-2.jpg" alt="">
         </div>
     </div>
     <div class="tabPanel" id="tabpanel3">
@@ -308,7 +312,10 @@
             document.getElementById("display6").value = i;
         }
         </script>
-    <div class="tabPanel" id="tabpanel4">Tab 4:Content</div>
+    <div class="tabPanel" id="tabpanel4">
+        <!-- <iframe scrolling="no" frameborder="0" src="https://www.wolframcloud.com/obj/demonstrations/Published/MultipleSlitDiffractionPattern?_view=EMBED" style="border:0;"></iframe> -->
+		<div id="7ac35fb2-4882-4cc7-9023-b764bac2f885-15219-60508"></div>
+    </div>
 </div>
 <footer>
     <p class="big-text-style">
@@ -330,6 +337,13 @@
 <script src="../js/Virtual-Physics-Lab-Revised.js"></script>
 <script src="../js/experiment-tabs.js"></script>
 <script src="../js/scrolltotop.js"></script>
+<script>
+    WolframNotebookEmbedder.embed(
+        "https://www.wolframcloud.com/obj/demonstrations/Published/MultipleSlitDiffractionPattern",
+        document.getElementById("7ac35fb2-4882-4cc7-9023-b764bac2f885-15219-60508"), {allowInteract: true}
+    );
+</script>
+<script crossorigin src="https://www.wolframcdn.com/notebook-embedder/0.1/wolfram-notebook-embedder.js"></script>
 </body>
 </html>
 
