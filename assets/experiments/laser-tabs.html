@@ -25,6 +25,14 @@
             <div class="logo"><a href="../../index.html">Virtual Physics Lab</a></div>
         </div>
     </nav>
+    <h1 class="title">Laser Interference</h1>
+<div class="tabContainer">
+    <div class="buttonContainer">
+        <button onclick="showPanel(0)">Theory</button>
+        <button onclick="showPanel(1)">Formula</button>
+        <button onclick="showPanel(2)">Calculator</button>
+        <button onclick="showPanel(3)">Animation</button>
+    </div>
     <script>
         function Delta(){
         a = parseFloat(document.getElementById("a").value);
@@ -107,14 +115,7 @@
     <div id="progress">
         <span id="progress-value">&#x1F815;</span>
     </div>
-<h1 class="title">Laser Interference</h1>
-<div class="tabContainer">
-    <div class="buttonContainer">
-        <button onclick="showPanel(0)">Theory</button>
-        <button onclick="showPanel(1)">Formula</button>
-        <button onclick="showPanel(2)">Calculator</button>
-        <button onclick="showPanel(3)">Animation</button>
-    </div>
+
     <div class="tabPanel"id="tabpanel1">
         <h3>Theory</h3>
         <div class="Theory">
@@ -339,7 +340,7 @@
 <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
 <script src="../js/Virtual-Physics-Lab-Revised.js"></script>
 <script src="../js/experiment-tabs.js"></script>
-<script src="../js/scrolltotop.js"></script
+<script src="../js/scrolltotop.js"></script>
 </body>
 </html>
 
@@ -439,4 +440,4 @@
 // {
 //         delta = n*(a+b)*Math.sin(ang);
 //         document.getElementById("delta").value = delta;
-//}-->
+//} -->

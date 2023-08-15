@@ -67,9 +67,15 @@ footer{
   color: var(--primary);
   padding: 4rem;
   text-align: center;
-  box-sizing: border-box;
 }
 footer a{
   /* top: 5vw; */
   color: var(--primary);
+}
+
+.f-log{
+  background: linear-gradient(to bottom, var(--accent1), var(--accent2));
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+  background-clip: text;
 }

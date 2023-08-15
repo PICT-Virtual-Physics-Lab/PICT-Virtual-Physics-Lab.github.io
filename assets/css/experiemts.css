@@ -58,3 +58,10 @@ a:active{
 img{
     box-shadow: 0 0 20px 1px #1818189a;
 }
+.material-symbols-outlined {
+    font-variation-settings:
+    'FILL' 1,
+    'wght' 400,
+    'GRAD' 0,
+    'opsz' 48
+  }
