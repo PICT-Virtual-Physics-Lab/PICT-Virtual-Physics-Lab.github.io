@@ -127,9 +127,9 @@
     </div>
     <div class="tabPanel" id="tabpanel2">
         <div>
-                <img src="../images/experiments/Polarisation/Malus-Law-Experiment-2.jpg" alt="Polarisation Apparatus">
+                <img src="../images/experiments/Polarisation/Malus-Law-Experiment-2.jpg" alt="Polarisation Apparatus" width="100%">
                 <br><br><br><br>
-                <img src="../images/experiments/Polarisation/Malus-Law-Experiment-1.jpg" alt="Effect of Intensity of light due Polarisation">
+                <img src="../images/experiments/Polarisation/Malus-Law-Experiment-1.jpg" alt="Effect of Intensity of light due Polarisation" width="100%">
         </div>
     </div>
     <div class="tabPanel" id="tabpanel3">
@@ -223,6 +223,7 @@ polarizer" onclick="answer1()" class="outputbtn">
                 justify-content: center;
                 top: 0;
                 margin:0px 10px 50px 10px;
+                overflow: hidden;
             }
             .simulator{
               max-height: 1000vh;
@@ -244,7 +245,6 @@ polarizer" onclick="answer1()" class="outputbtn">
             }
             .experiment-slider{
             box-sizing: border-box;
-            padding: 0;
             font-family: Arial, sans-serif;
             display: flex;
             padding: 1em 1em 0 1em;
@@ -412,10 +412,10 @@ polarizer" onclick="answer1()" class="outputbtn">
                     <input type="range"class="range" id="slider" max="360" min="0" value="90" onmousemove="slidervalue(this.value)">
                     <span id="rangeval">0</span>
                 </div>
+                <h3 style="color: #333; position: relative;">Angle Between Polariser and Analyser</h3>
             </div> 
-            <h3 style="color: #333; position: absolute; margin: -6em 0 0 1.5em;">Angle Between Polariser and Analyser</h3>
-            </div>
-            <div class="popup" onclick="popUp()" style="position: absolute; color: #333; margin: -15em 1em 0 -25em;">Click here for Instructions for use.
+            <div class="popup" onclick="popUp()" style="position: relative; color: #333;">
+                <p style="position: relative; text-align: left; justify-content: center;">Click here for Instructions for use.</p>
                 <span class="popuptext" id="myPopup">
                     <li>The Intensity Boxes are Read-Only. 
                     <li>Don't waste your time trying to type in them.
@@ -430,6 +430,8 @@ polarizer" onclick="answer1()" class="outputbtn">
                     page and move the slider.
                 </span>
               </div>
+          </div>
+            
       </div>
       
       <script>

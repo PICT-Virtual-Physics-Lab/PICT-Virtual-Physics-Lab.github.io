@@ -116,10 +116,12 @@ header li{
     align-items: center;
   }
 .imgparallax {
+  background-attachment: fixed;
   background-size: cover;
   background-repeat:no-repeat;
   filter: invert(var(--inv));
-  background-image: url("https://images.unsplash.com/photo-1635070041078-e363dbe005cb?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=870&q=80");
+  background-image: url("../images/experiment-title/imgparallax.avif");
+  /* background-image: url("https://images.unsplash.com/photo-1635070041078-e363dbe005cb?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=870&q=80"); */
   /* background-image: url("https://www.youtube.com/watch?v=dQw4w9WgXcQ"); */
   /*^^^Rick Roll version  */
 }
@@ -128,7 +130,8 @@ header li{
   background-repeat: no-repeat;
   filter: grayscale(100%);
   /* background-image: url('/videos/rube1.mp4'); */
-  background-image: url('https://www.austincc.edu/sites/default/files/sem-physics.jpg');
+  /* background-image: url('https://www.austincc.edu/sites/default/files/sem-physics.jpg'); */
+  background-image: url("../images/experiment-title/imgparallax1.jpg");
 }
 /* Introduction Style Text Editing */
 .introduction p , .introduction ol{
