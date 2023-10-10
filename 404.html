@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script>
+        // Remove ".html" from the URL
+        if (window.location.pathname.endsWith('.html')) {
+            window.location.pathname = window.location.pathname.slice(0, -5);
+        }
+    </script>
+</head>
+<body>
+    <p>If you are not redirected, <a href="index.html">click here</a>.</p>
+</body>
+</html>
+
+<style>
+    body{
+        background-image: url(assets/images/error404.jpeg);
+    }
+</style>
