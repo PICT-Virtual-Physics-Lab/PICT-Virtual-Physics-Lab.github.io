@@ -141,53 +141,107 @@
         <div class="Theory">
             <h3>Theory</h3>
         <br>
-            Optical fibres works on the principle of total internal reflection. When light ray strikes at the internal surface 
-            <br> of optical fibre cable called such that incidence angle is greater than critical angle, 
-            <br>then incident light ray reflects in the same medium and this phenomenon repeats. <br>
-            In this way a light signal travels from one end of the cable to another end.
-            Beyond a certain angle, the refraction will cause light to be reflected from the surface. 
-            <br>
-            <br>Optical fiber uses this reflection to "trap" fiber in the core of the fiber 
-            by choosing core and cladding materials <br>with the proper index of 
-            refraction that will cause all the light to be 
-            reflected if the angle of the light is below a certain angle. 
-            <br>We call that "total internal reflection."
+        <h3>Construction</h3>
+        <img src="../images/experiments/Fiber-optics/fiber-optic-theory-1.jpg" alt="Construction of an optical fiber, showing core, cladding, and jacket." width="25%" style="float: left; margin: 2vw;">
+        An optical fiber consists of a core with a refractive index n core and diameter 2a <br>
+        and a cladding, with a refractive index ncl and diameter d. <br><br>
+        Typical core diameters range from 4 to 8 µm for single-mode fibers, from 50 to l00 µm <br>
+        for multimode fibers used for communications, and from 200 to l000 µm for <br>
+        large-core fibers used in power transmission applications. <br><br>
+        Communications-grade fibers will have d in the range of 125 – 140 µm, with some <br>
+        single-mode fibers as small as 80 µm. In high-quality communications fibers, <br>
+        both the core and the cladding are made of silica glass, <br>
+        with small amounts of impurities added to the core <br>
+        to raise the index of refraction slightly.
+        <br><br>
+        The transition of the optical parameters from the core to the cladding can be discontinuous (stepindex fiber) <br>
+        or smooth (graded-index fiber). <br>
+        There are also lower-quality fibers available which have a glass core surrounded by a plastic cladding, <br>
+        as well as some all-plastic fibers. The latter have very high attenuation coefficients and <br>
+        are used only in applications requiring short lengths of fiber. <br>
+        The optical fiber will generally be surrounded by a protective jacket. <br>
+        <br>
+        This jacket may be made from a plastic and have an outside diameter of 500 – l000 µm. <br>
+        However, the jacket may also be a very thin layer of varnish or acrylate material.
+        <br><br>
+        <img src="../images/experiments/Fiber-optics/fiber-optic-theory-2.jpg" alt="Some popular fiber sizes" style="text-align: center;"> <br><br>
+        <h3>Numerical Aperture</h3>
+        The numerical aperture (NA) is a measure of how much light can be collected by an optical system, <br>
+        whether it is an optical fiber, a microscope objective lens or a photographic lens. <br>
+        <b>It is the product of the <br>
+            refractive index of the incident medium and the sine of the maximum ray angle <br></b>
+        <br><br>
+        <h3>Attenuation</h3>
+        Attenuation (loss) is a logarithmic relationship between the optical output power and the optical input power in a <br>
+        fiber optical system.It is a measure of the decay of signal strength, or loss of light power, that occurs <br>
+        as light pulses propagate through the length of the fiber. <br>
+        In principle, the fiber attenuation is the easiest of all fiber measurements to make. <br>
+        The method which generally used is called the “cutback method”. <br>
+        <br> <img src="../images/experiments/Fiber-optics/fiber-optic-theory-3.jpg" alt="Laboratory setup for the cutback method of determining fiber attenuation" width="45%" ><br><br>
+
+        All that is required is to launch power from a source into a long length of fiber, measure the power at the far <br>
+        end of the fiber using a detector with a linear response, and then, after cutting off <br>
+        a length of the fiber, measure the power transmitted <br> 
+        by the shorter length. <br><br>
+        The reason for leaving a short length of fiber at the input end of the system is to make sure that the loss that is measured <br>
+        is due solely to the loss of the fiber and not to loss which occurs when the light source is coupled to the fiber.
+        <br><br>
+        <img src="../images/experiments/Fiber-optics/fiber-optic-theory-4.jpg" alt="Wavelength dependence of the optical losses in a typical fiber" width="50%">
         </div>
     
     </div>
     <div class="tabPanel" id="tabpanel2">
-        <div class="flex">
-            <p>
-                <img src="https://global.canon/en/technology/s_labo/light/003/anigif/c003s008f001.gif" width="300" height="300">
+        <style>
+            .item1 { grid-area: 1; }
+            .item2 { grid-area: 2; }
+            .item3 { grid-area: 3; }
+            .item4 { grid-area: 4; }
+            .item5 { grid-area: 5; }
+            .item6 { grid-area: 6; }
+            .item7 { grid-area: 7; }
+            .grid-container{
+                display: grid;
+                /* gap: 10px; */
+                text-align: left;
+                align-items: center;
+                /* grid-template-columns: 1fr, 1fr; */
+                grid-template-areas: 
+                "1 1 2 2"
+                "2 3"
+                "7 5"
+                "6 6"  ;
+            }
+        </style>
+        <div class="grid-container">
+            <p class="item1">
+                <img src="https://global.canon/en/technology/s_labo/light/003/anigif/c003s008f001.gif" width="45%">
             </p>  
-            <p>
-                <img src="https://questtel.com/img-qt/articles/aperture.jpg" width="300" height="200">
+            <p class="item2">
+                <img src="https://questtel.com/img-qt/articles/aperture.jpg" width="45%">
             
             </p>
-        </div>
-        <div class="flex">
-            <font size="5">
-                Numerical Aperture =
-                        <b><em>
-                            <math>
-                                <mfrac>
-                                  <msqrt>
-                                    <mi>n1&sup2 - n2&sup2</mi>
-                                  </msqrt> 
-                                </mfrac>     
-                            </math>
-                        </b></em>
-            </font>
-            <p>
-                <img src="https://edurev.gumlet.io/ApplicationImages/Temp/1611931_dce4ce43-4ca3-4d9e-9809-cfbbd04e5281_lg.PNG?w=400&dpr=2.6" width="300" height="200">
+            <p class="item3">
+                <font size="5">
+                    Numerical Aperture =
+                            <b><em>
+                                <math>
+                                    <mfrac>
+                                      <msqrt>
+                                        <mi>n1&sup2 - n2&sup2</mi>
+                                      </msqrt> 
+                                    </mfrac>     
+                                </math>
+                            </b></em>
+                </font>
             </p>
-            </div>
-            <div class="flex">
-            <p>
-                <img src="https://image1.slideserve.com/2407281/fractional-index-change-l.jpg" width="300" height="200">
+            <p class="item4">
+                <img src="https://edurev.gumlet.io/ApplicationImages/Temp/1611931_dce4ce43-4ca3-4d9e-9809-cfbbd04e5281_lg.PNG?w=400&dpr=2.6" width="45%">
             </p>
-            <div style="flex-basis: auto;">
-                Fractional Index Change = 
+            <p class="item5">
+                <img src="https://image1.slideserve.com/2407281/fractional-index-change-l.jpg" width="45%">
+            </p>
+            <p class="item6">
+                <h3>Fractional Index Change</h3> <br>
                 <math>
                     <mfrac>
                         <mi>n1-n2</mi>
@@ -195,19 +249,28 @@
                        </mfrac>
                 </math>
                 <br>
-                Critical Angle = sin<sup>-1</sup>(
+                <h3>Critical Angle</h3> <br>
+                 sin<sup>-1</sup>(
                     <math>
                         <mfrac>
                             <mi>n2</mi>
                             <mi>n1</mi>
                         </mfrac>
                     </math>)
-            </div>
+            </p>
+                <br><br>
+                <p class="item7">
+                    <h3>Attenuation</h3><br>
+                    L(dB) = -10 ( log ( <math><mfrac>
+                        <mi>P<sub>final</sub></mi> 
+                        <mi>P<sub>initial</sub></mi>
+                        </mfrac></math>))    
+                </p>
         </div>
     </div>
     <div class="tabPanel" id="tabpanel3">
         <div class="container">
-            <div class="calculator">
+            <div class="calculator" style="box-shadow: 0 0 20px -5px #000;">
                 <form>
                     <div class="display">
                         <input type="text" name="display" id="display" readonly>
